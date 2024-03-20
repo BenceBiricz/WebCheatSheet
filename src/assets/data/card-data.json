@@ -1,0 +1,28 @@
+{
+  "columns": [
+    {
+      "columnItem": [
+        {
+          "title": "Basic",
+          "items": ["1", "2"]
+        },
+        {
+          "title": "Basic",
+          "items": ["1", "2"]
+        }
+      ]
+    },
+    {
+      "columnItem": [
+        {
+          "title": "Basic",
+          "items": ["1", "2"]
+        },
+        {
+          "title": "Basic",
+          "items": ["1", "2"]
+        }
+      ]
+    }
+  ]
+}
