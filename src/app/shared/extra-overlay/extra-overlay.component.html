@@ -1,0 +1,30 @@
+<div
+  *ngIf="isItemChoosen"
+  class="bg-dark pt-3 bg-gradient text-light fixed-bottom"
+>
+  <div
+    class="d-flex flex-column justify-content-center align-items-center gap-3"
+  >
+    <div class="d-flex w-100 align-items-center justify-content-between px-4">
+      <div></div>
+      <h4>{{ choosenItem }}</h4>
+      <button class="btn text-light" (click)="close()">
+        <i class="bi bi-x-circle h1"></i>
+      </button>
+    </div>
+
+    <div
+      class="bg-secondary bg-gradient d-flex flex-wrap flex-lg-nowrap justify-content-between align-items-center size gap-3 p-4"
+    >
+      <div class="content">
+        <h5>Code snippet</h5>
+        <textarea class="my-textarea" rows="5"></textarea>
+      </div>
+
+      <div class="content">
+        <h5>Preview</h5>
+        <textarea class="my-textarea" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+</div>

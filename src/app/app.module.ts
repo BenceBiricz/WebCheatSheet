@@ -12,6 +12,7 @@ import { HtmlPageComponent } from './pages/html-page/html-page.component';
 import { CssPageComponent } from './pages/css-page/css-page.component';
 import { TypescriptPageComponent } from './pages/typescript-page/typescript-page.component';
 import { CheatSheetCardsComponent } from './shared/cheat-sheet-cards/cheat-sheet-cards.component';
+import { ExtraOverlayComponent } from './shared/extra-overlay/extra-overlay.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CheatSheetCardsComponent } from './shared/cheat-sheet-cards/cheat-sheet
     CssPageComponent,
     TypescriptPageComponent,
     CheatSheetCardsComponent,
+    ExtraOverlayComponent,
   ],
   imports: [BrowserModule, NgbModule, AppRoutingModule, HttpClientModule],
   providers: [],

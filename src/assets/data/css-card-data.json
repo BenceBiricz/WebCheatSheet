@@ -3,50 +3,45 @@
     {
       "columnItem": [
         {
-          "title": "Basics",
-          "items": ["<!DOCTYPE>", "<html>", "<head>", "<body>"]
-        },
-        {
-          "title": "Text and Formatting",
-          "items": ["<h1>-<h6>", "<p>", "<br>", "<hr>"]
-        },
-        {
-          "title": "Interactive Elements",
-          "items": ["<button>", "<input type=>", "<label>"]
-        }
-      ]
-    },
-    {
-      "columnItem": [
-        {
-          "title": "Tables",
-          "items": ["<table>", "<tr>", "<td>", "<th>"]
-        },
-        {
-          "title": "Forms",
-          "items": ["<form>", "<input>", "<textarea>", "<select>", "<button>"]
-        },
-        {
-          "title": "Audio and Video",
-          "items": ["<audio>", "<video>", "<source>", "<select>"]
-        }
-      ]
-    },
-    {
-      "columnItem": [
-        {
-          "title": "Links and Images",
-          "items": ["<a>", "<img>", "<figure>", "<figcaption>"]
-        },
-        {
-          "title": "Semantic HTML",
+          "title": "Selectors",
           "items": [
-            "<header>",
-            "<nav>",
-            "<section>",
-            "<article>",
-            "<aside>",
-            "<footer>"
+            "Type",
+            "Class",
+            "ID",
+            "Universal",
+            "Attribute",
+            "Pseudo-classes",
+            "Pseudo-elements"
+          ]
+        },
+        {
+          "title": "Length units",
+          "items": ["Px", "Em", "Rem", "Percent"]
+        },
+        {
+          "title": "Font properties",
+          "items": [
+            "Font-family",
+            "Font-size",
+            "Font-weight",
+            "Font-style",
+            "Text-transform",
+            "Text-decoration",
+            "Line-height"
+          ]
+        },
+        {
+          "title": "Flexbox",
+          "items": [
+            "Flex container",
+            "Flex items",
+            "Flex-grow",
+            "Flex-shrink",
+            "Flex-basis",
+            "Flex-wrap",
+            "Align-items",
+            "Align-self",
+            "Justify-content"
           ]
         }
       ]
@@ -54,12 +49,108 @@
     {
       "columnItem": [
         {
-          "title": "Lists",
-          "items": ["<ul>", "<ol>", "<li>"]
+          "title": "Properties",
+          "items": ["Color", "Background", "Font", "Text", "Clear"]
         },
         {
-          "title": "Metadata and Embedding",
-          "items": ["<meta>", "<link>", "<script>", "<style>"]
+          "title": "Colors",
+          "items": ["Hexadecimal", "RGB", "RGBA", "HSL", "HSLA"]
+        },
+        {
+          "title": "Text properties",
+          "items": [
+            "Color",
+            "Text-align",
+            "Text-shadow",
+            "Letter-spacing",
+            "Word-spacing",
+            "Text-overflow",
+            "White-space",
+            "Overflow-wrap"
+          ]
+        },
+
+        {
+          "title": "Grid ",
+          "items": [
+            "Grid container",
+            "Grid items",
+            "Grid-template-rows",
+            "Grid-template-columns",
+            "Grid-template-areas",
+            "Grid-gap",
+            "Grid-row-gap",
+            "Grid-column-gap",
+            "Grid-auto-rows",
+            "Grid-auto-columns",
+            "Grid-auto-flow"
+          ]
+        }
+      ]
+    },
+    {
+      "columnItem": [
+        {
+          "title": "Animation",
+          "items": [
+            "Keyframes",
+            "Timing-function",
+            "Duration",
+            "Timing-function",
+            "Delay",
+            "Iteration-count",
+            "Direction",
+            "Fill-mode",
+            "Play-state"
+          ]
+        },
+        {
+          "title": "Color properties",
+          "items": ["Color", "Background-color", "Opacity"]
+        },
+        {
+          "title": "Background properties",
+          "items": [
+            "Background-image",
+            "Background-repeat",
+            "Background-position",
+            "Background-size",
+            "Background-attachment"
+          ]
+        },
+        {
+          "title": "Transforms",
+          "items": ["Translate", "Rotate", "Scale", "Skew"]
+        },
+        {
+          "title": "Transition",
+          "items": ["Property", "Duration", "Timing-function", "Delay"]
+        }
+      ]
+    },
+    {
+      "columnItem": [
+        {
+          "title": "Positioning",
+          "items": ["static", "relative", "absolute", "fixed", "Float"]
+        },
+        {
+          "title": "Display",
+          "items": ["Block", "Inline", "Inline-block", "Flex", "Grid"]
+        },
+        {
+          "title": "Shadow",
+          "items": ["Box-shadow", "Text-shadow"]
+        },
+        {
+          "title": "Responsive Design",
+          "items": [
+            "Media Queries",
+            "Screen sizes",
+            "Device orientation",
+            "Resolution",
+            "Viewport Meta Tag"
+          ]
         }
       ]
     }

@@ -1,0 +1,27 @@
+.size {
+  min-width: 100%;
+}
+
+.content {
+  flex-basis: 100%;
+}
+
+.my-textarea {
+  width: 100%;
+  min-height: 30vh;
+  border-radius: 8px;
+}
+
+button {
+  transition: transform 0.4s, color 0.4s;
+}
+
+button:hover {
+  transform: scale(110%);
+  color: rgb(107, 151, 218) !important;
+}
+
+button:active {
+  border-color: rgb(0, 0, 0, 0) !important;
+  color: rgb(69, 253, 125) !important;
+}

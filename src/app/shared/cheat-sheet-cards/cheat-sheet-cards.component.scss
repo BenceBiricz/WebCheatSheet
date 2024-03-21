@@ -1,0 +1,37 @@
+// Card styling
+.list-title {
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.list-item {
+  list-style: none;
+  padding: 10px 20px;
+
+  .list-item-text {
+    font-weight: 400;
+    text-decoration: none;
+    color: grey;
+  }
+}
+
+.card {
+  padding: 0 !important;
+}
+
+li {
+  transition: background-color 0.25s ease-out;
+}
+
+a {
+  transition: color 0.25s ease-out, text-shadow 0.5s;
+}
+
+li:hover {
+  background-color: rgb(208, 211, 208);
+  cursor: pointer;
+
+  a {
+    color: blue !important;
+  }
+}
