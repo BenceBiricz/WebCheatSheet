@@ -15,3 +15,15 @@
   font-weight: 700;
   color: yellowgreen;
 }
+
+.github-button {
+  color: black;
+
+  transition: color 0.4s ease-out, transform 0.7s ease-out;
+}
+
+.github-button:hover {
+  color: white;
+
+  transform: rotate(360deg) scale(120%);
+}
