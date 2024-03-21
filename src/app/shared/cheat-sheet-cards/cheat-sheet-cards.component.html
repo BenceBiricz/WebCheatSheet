@@ -2,7 +2,18 @@
 <section class="p-5">
   <div class="container">
     <div class="d-flex align-items-center justify-content-center">
-      <h1 class="mb-5">{{ title }}</h1>
+      <h1 class="mb-3">{{ title }}</h1>
+    </div>
+
+    <div class="d-flex align-items-center search-wrapper mb-4 w-25">
+      <i class="bi bi-search search-input"></i>
+      <input
+        #search
+        type="text"
+        class="form-control"
+        id="search"
+        aria-describedby="Searchtext"
+      />
     </div>
 
     <div class="row gx-5">

@@ -35,3 +35,12 @@ li:hover {
     color: blue !important;
   }
 }
+
+.search-wrapper {
+  position: relative;
+
+  .search-input {
+    position: absolute;
+    left: 90%;
+  }
+}

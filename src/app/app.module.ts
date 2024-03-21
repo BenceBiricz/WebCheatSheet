@@ -13,6 +13,7 @@ import { CssPageComponent } from './pages/css-page/css-page.component';
 import { TypescriptPageComponent } from './pages/typescript-page/typescript-page.component';
 import { CheatSheetCardsComponent } from './shared/cheat-sheet-cards/cheat-sheet-cards.component';
 import { ExtraOverlayComponent } from './shared/extra-overlay/extra-overlay.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,14 @@ import { ExtraOverlayComponent } from './shared/extra-overlay/extra-overlay.comp
     CheatSheetCardsComponent,
     ExtraOverlayComponent,
   ],
-  imports: [BrowserModule, NgbModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    NgbModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
