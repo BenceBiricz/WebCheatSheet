@@ -17,3 +17,12 @@
 .card {
   padding: 0 !important;
 }
+
+li:hover {
+  background-color: rgb(208, 211, 208);
+  cursor: pointer;
+
+  a {
+    color: blue !important;
+  }
+}

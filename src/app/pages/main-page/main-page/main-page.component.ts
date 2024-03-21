@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import data from '../../assets/data/card-data.json';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-main-page',
@@ -7,106 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './main-page.component.scss',
 })
 export class MainPageComponent implements OnInit {
+  data: any;
+
+  constructor(private http: HttpClient) {}
+
   ngOnInit() {
-    // console.log(data);
+    this.http.get('assets/data/card-data.json').subscribe((data: any) => {
+      this.data = data!.columns;
+    });
   }
 
-  columns = [
-    {
-      columnItem: [
-        {
-          title: 'Basic',
-          items: ['1', '2', '3'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3', '3', '4', '1', '2', '3', '4'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3', '4'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3', '4', '1', '2', '3', '4'],
-        },
-      ],
-    },
-    {
-      columnItem: [
-        {
-          title: 'Basic',
-          items: ['1', '2', '3', '4', '1', '2'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '4', '1', '2', '3', '4'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3', '4'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '1', '2', '3', '4'],
-        },
-      ],
-    },
-    {
-      columnItem: [
-        {
-          title: 'Basic',
-          items: ['1', '2', '3', '4', '1', '2', '3', '4', '1', '2', '3', '4'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3', '4'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3', '4', '1', '2', '3', '4'],
-        },
-      ],
-    },
-    {
-      columnItem: [
-        {
-          title: 'Basic',
-          items: ['1', '2', '3'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3', '4', '1', '2', '3', '4', '1', '2', '3', '4'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3', '4'],
-        },
-        {
-          title: 'Basic',
-          items: ['1', '2', '3', '4', '1', '2', '3', '4'],
-        },
-      ],
-    },
-  ];
+  onClick(itemName: string) {
+    console.log('clicked: ' + itemName);
+  }
 }

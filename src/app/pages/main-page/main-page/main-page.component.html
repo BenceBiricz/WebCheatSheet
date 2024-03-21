@@ -44,14 +44,18 @@
 
     <div class="row gx-5">
       <!-- Cards -->
-      <div *ngFor="let column of columns" class="col-md-3">
+      <div *ngFor="let column of data" class="col-md-3">
         <div *ngFor="let card of column.columnItem" class="row mb-4">
           <div class="card rounded-3 shadow">
-            <h3 class="rounded-top-3 card-title bg-dark text-light list-title">
+            <h5 class="rounded-top-3 card-title bg-dark text-light list-title">
               {{ card.title }}
-            </h3>
+            </h5>
             <ul class="m-0 p-0">
-              <li *ngFor="let item of card.items" class="list-item">
+              <li
+                *ngFor="let item of card.items"
+                class="list-item"
+                (click)="onClick(item)"
+              >
                 <a class="list-item-text">{{ item }}</a>
               </li>
             </ul>
@@ -63,3 +67,5 @@
     </div>
   </div>
 </section>
+
+<app-footer></app-footer>
