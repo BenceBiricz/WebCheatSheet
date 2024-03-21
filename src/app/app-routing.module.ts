@@ -1,10 +1,35 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule, Component } from '@angular/core';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
+import { HtmlPageComponent } from './pages/html-page/html-page.component';
+import { CssPageComponent } from './pages/css-page/css-page.component';
+import { TypescriptPageComponent } from './pages/typescript-page/typescript-page.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'html',
+    component: HtmlPageComponent,
+  },
+  {
+    path: 'css',
+    component: CssPageComponent,
+  },
+  {
+    path: 'typescript',
+    component: TypescriptPageComponent,
+  },
+  {
+    path: '**',
+    redirectTo: 'html',
+  },
+];
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+};
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, routerOptions)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

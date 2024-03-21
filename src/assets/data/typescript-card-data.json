@@ -1,0 +1,67 @@
+{
+  "columns": [
+    {
+      "columnItem": [
+        {
+          "title": "Basics",
+          "items": ["<!DOCTYPE>", "<html>", "<head>", "<body>"]
+        },
+        {
+          "title": "Text and Formatting",
+          "items": ["<h1>-<h6>", "<p>", "<br>", "<hr>"]
+        },
+        {
+          "title": "Interactive Elements",
+          "items": ["<button>", "<input type=>", "<label>"]
+        }
+      ]
+    },
+    {
+      "columnItem": [
+        {
+          "title": "Tables",
+          "items": ["<table>", "<tr>", "<td>", "<th>"]
+        },
+        {
+          "title": "Forms",
+          "items": ["<form>", "<input>", "<textarea>", "<select>", "<button>"]
+        },
+        {
+          "title": "Audio and Video",
+          "items": ["<audio>", "<video>", "<source>", "<select>"]
+        }
+      ]
+    },
+    {
+      "columnItem": [
+        {
+          "title": "Links and Images",
+          "items": ["<a>", "<img>", "<figure>", "<figcaption>"]
+        },
+        {
+          "title": "Semantic HTML",
+          "items": [
+            "<header>",
+            "<nav>",
+            "<section>",
+            "<article>",
+            "<aside>",
+            "<footer>"
+          ]
+        }
+      ]
+    },
+    {
+      "columnItem": [
+        {
+          "title": "Lists",
+          "items": ["<ul>", "<ol>", "<li>"]
+        },
+        {
+          "title": "Metadata and Embedding",
+          "items": ["<meta>", "<link>", "<script>", "<style>"]
+        }
+      ]
+    }
+  ]
+}

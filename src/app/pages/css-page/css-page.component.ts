@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrl: './main-page.component.scss',
+  selector: 'app-css-page',
+  templateUrl: './css-page.component.html',
+  styleUrl: './css-page.component.scss',
 })
-export class MainPageComponent implements OnInit {
+export class CssPageComponent implements OnInit {
   data: any;
 
   constructor(private http: HttpClient) {}

@@ -1,0 +1,43 @@
+<!-- Hero section -->
+<section
+  class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+>
+  <div class="container">
+    <div class="d-sm-flex align-items-center justify-content-between">
+      <div>
+        <h1>Learn <span class="text-warning">Web development</span></h1>
+        <p class="lead my-4">
+          Welcome to <span class="text-info">WebDevCheatSheet</span>, your go-to
+          destination for mastering the fundamentals of web development.
+        </p>
+
+        <a
+          href="#mainContent"
+          class="btn btn-primary rounded-circle btn-lg mb-lg-5 btn-hero"
+        >
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+      <img
+        class="img-fluid w-50 d-none d-sm-block"
+        src="assets/pictures/main.svg"
+        alt=""
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Hero section -->
+<section class="bg-primary text-light p-5 shadow">
+  <div class="container">
+    <div class="d-md-flex align-items-center justify-content-center">
+      <h3 class="mb-3 mb-md-0">
+        Your Quick Reference Guide for Web Development Mastery!
+      </h3>
+    </div>
+  </div>
+</section>
+
+<div id="mainContent" class="section pt-5">
+  <router-outlet></router-outlet>
+</div>

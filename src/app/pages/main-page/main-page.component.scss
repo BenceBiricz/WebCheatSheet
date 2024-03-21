@@ -1,0 +1,12 @@
+.section {
+  min-height: 100dvh;
+}
+
+.btn-hero {
+  font-size: 2rem;
+  transition: transform 1s;
+}
+
+.btn-hero:hover {
+  transform: rotate(90deg) scale(110%) translateX(20px);
+}

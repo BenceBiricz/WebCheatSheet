@@ -1,0 +1,13 @@
+li {
+  transition: transform 0.4s;
+}
+
+li:hover {
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+
+  transform: rotate(3deg) scale(115%);
+
+  a {
+    color: rgb(35, 138, 207) !important;
+  }
+}
