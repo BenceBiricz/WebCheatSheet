@@ -19,6 +19,8 @@
     "@angular/platform-browser-dynamic": "^17.1.0",
     "@angular/router": "^17.1.0",
     "@ng-bootstrap/ng-bootstrap": "^16.0.0-rc.2",
+    "@ngrx/store": "^17.1.1",
+    "@ngrx/store-devtools": "^17.1.1",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "rxjs": "~7.8.0",

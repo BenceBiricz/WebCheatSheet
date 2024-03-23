@@ -14,6 +14,8 @@ import { TypescriptPageComponent } from './pages/typescript-page/typescript-page
 import { CheatSheetCardsComponent } from './shared/cheat-sheet-cards/cheat-sheet-cards.component';
 import { ExtraOverlayComponent } from './shared/extra-overlay/extra-overlay.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+import { overlayReducer } from './store/reducers/overlay-open-reducer';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    StoreModule.forRoot({ myBoolean: overlayReducer }),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,5 +1,5 @@
 <div
-  *ngIf="isItemChoosen"
+  *ngIf="myBoolean$ | async"
   class="bg-dark pt-3 bg-gradient text-light fixed-bottom"
 >
   <div
@@ -8,7 +8,7 @@
     <div class="d-flex w-100 align-items-center justify-content-between px-4">
       <div></div>
       <h4>{{ choosenItem }}</h4>
-      <button class="btn text-light" (click)="close()">
+      <button class="btn text-light" (click)="toggleBoolean()">
         <i class="bi bi-x-circle h2"></i>
       </button>
     </div>
@@ -22,7 +22,7 @@
       </div>
 
       <div class="content">
-        <h5>Preview</h5>
+        <h5>Description</h5>
         <textarea class="my-textarea" rows="5"></textarea>
       </div>
     </div>

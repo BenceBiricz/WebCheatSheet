@@ -1,4 +1,8 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AppState } from '../../store/models/app-state';
+import { Store } from '@ngrx/store';
+import { toggleOverlay } from '../../store/actions/overlay-open-action';
 
 @Component({
   selector: 'app-extra-overlay',
@@ -7,9 +11,14 @@ import { Component, Input, Output } from '@angular/core';
 })
 export class ExtraOverlayComponent {
   @Input() choosenItem: string = '';
-  @Input() isItemChoosen: boolean = false;
 
-  close() {
-    //this.isItemChoosenOut = false;
+  myBoolean$: Observable<boolean>;
+
+  constructor(private store: Store<AppState>) {
+    this.myBoolean$ = this.store.select((state) => state.myBoolean);
+  }
+
+  toggleBoolean() {
+    this.store.dispatch(toggleOverlay());
   }
 }
