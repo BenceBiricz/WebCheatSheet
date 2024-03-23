@@ -4,7 +4,14 @@
       "columnItem": [
         {
           "title": "Basics",
-          "items": ["<!DOCTYPE>", "<html>", "<head>", "<body>"]
+          "items": ["<!DOCTYPE>", "<html>", "<head>", "<body>"],
+          "test": [
+            {
+              "name": "<!DOCTYPE>",
+              "codeSnippet": "code snippet from json",
+              "description": "desc from json"
+            }
+          ]
         },
         {
           "title": "Text and Formatting",

@@ -41,6 +41,13 @@ li:hover {
 
   .search-input {
     position: absolute;
-    left: 90%;
+    left: 85%;
+    cursor: pointer;
+
+    transition: transform 0.4s ease-out;
+  }
+
+  .search-input:hover {
+    transform: scale(105%) translateX(10px);
   }
 }

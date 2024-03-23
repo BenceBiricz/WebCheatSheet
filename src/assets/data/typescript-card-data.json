@@ -3,50 +3,32 @@
     {
       "columnItem": [
         {
-          "title": "Basics",
-          "items": ["<!DOCTYPE>", "<html>", "<head>", "<body>"]
-        },
-        {
-          "title": "Text and Formatting",
-          "items": ["<h1>-<h6>", "<p>", "<br>", "<hr>"]
-        },
-        {
-          "title": "Interactive Elements",
-          "items": ["<button>", "<input type=>", "<label>"]
-        }
-      ]
-    },
-    {
-      "columnItem": [
-        {
-          "title": "Tables",
-          "items": ["<table>", "<tr>", "<td>", "<th>"]
-        },
-        {
-          "title": "Forms",
-          "items": ["<form>", "<input>", "<textarea>", "<select>", "<button>"]
-        },
-        {
-          "title": "Audio and Video",
-          "items": ["<audio>", "<video>", "<source>", "<select>"]
-        }
-      ]
-    },
-    {
-      "columnItem": [
-        {
-          "title": "Links and Images",
-          "items": ["<a>", "<img>", "<figure>", "<figcaption>"]
-        },
-        {
-          "title": "Semantic HTML",
+          "title": "Types",
           "items": [
-            "<header>",
-            "<nav>",
-            "<section>",
-            "<article>",
-            "<aside>",
-            "<footer>"
+            "Number",
+            "String",
+            "Boolean",
+            "Array",
+            "Tuple",
+            "Enum",
+            "Any",
+            "Void",
+            "Null",
+            "Undefined",
+            "Never"
+          ]
+        },
+
+        {
+          "title": "Basics",
+          "items": ["Type Annotations", "Type Inference"]
+        },
+        {
+          "title": "Decorators",
+          "items": [
+            "Class decorators",
+            "Method decorators",
+            "Property decorators"
           ]
         }
       ]
@@ -54,12 +36,86 @@
     {
       "columnItem": [
         {
-          "title": "Lists",
-          "items": ["<ul>", "<ol>", "<li>"]
+          "title": "Functions",
+          "items": [
+            "Function declarations",
+            "Expressions",
+            "Optional parameters",
+            "Rest parameters",
+            "Function overloading"
+          ]
         },
         {
-          "title": "Metadata and Embedding",
-          "items": ["<meta>", "<link>", "<script>", "<style>"]
+          "title": "Generics",
+          "items": ["Generic functions", "Generic classes", "Constraints"]
+        },
+        {
+          "title": "TypeScript Compiler",
+          "items": [
+            "Configuration options",
+            "Tsconfig.json file",
+            "Compilation targets",
+            "Watch mode"
+          ]
+        }
+      ]
+    },
+    {
+      "columnItem": [
+        {
+          "title": "Interfaces",
+          "items": [
+            "Declaring interfaces",
+            "Optional properties",
+            "Readonly properties",
+            "Extending interfaces",
+            "Implementing interfaces"
+          ]
+        },
+        {
+          "title": "Advanced Types",
+          "items": [
+            "Union Types",
+            "Intersection Types",
+            "Type Aliases",
+            "Type Guards",
+            "Type Assertion",
+            "Discriminated Unions"
+          ]
+        },
+        {
+          "title": "Common Patterns",
+          "items": [
+            "Singleton pattern",
+            "Factory pattern",
+            "Dependency injection",
+            "Observer pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "columnItem": [
+        {
+          "title": "Classes",
+          "items": [
+            "Class syntax",
+            "Constructors",
+            "Properties",
+            "Methods",
+            "Access modifiers",
+            "Inheritance",
+            "Abstract classes"
+          ]
+        },
+        {
+          "title": "Modules",
+          "items": [
+            "Exporting modules",
+            "importing modules",
+            "Default exports",
+            "Namespace imports"
+          ]
         }
       ]
     }

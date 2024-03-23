@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
-import { Column, Data } from './interfaces/data';
+import { Column, Data, ColumnItem } from './interfaces/data';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../store/models/app-state';
 import { Observable } from 'rxjs';
@@ -29,14 +29,36 @@ export class CheatSheetCardsComponent implements OnInit {
       .get('assets/data/' + this.dataPath + '.json')
       .subscribe((data: any) => {
         this.data = data!.columns;
+
+        var columnsArray = this.data;
+
+        for (let i = 0; i < columnsArray.length; i++) {
+          for (let j = 0; j < columnsArray[i].columnItem.length; j++) {
+            for (
+              let k = 0;
+              k < columnsArray[0].columnItem[0].test.length;
+              k++
+            ) {
+              if (columnsArray[0].columnItem[0].test[k].name === '<!DOCTYPE>') {
+                console.log(columnsArray[0].columnItem[0].test[k].codeSnippet);
+              }
+            }
+          }
+        }
       });
   }
 
   onClick(itemName: string) {
     this.store.dispatch(toggleOverlay());
-    //this.sortBySearchTerm(this.data, 'Text and ');
 
     this.itemName = itemName;
+  }
+
+  searchText(val: any) {
+    console.log(val);
+    if (val) {
+      this.sortBySearchTerm(this.data, val);
+    }
   }
 
   // Function to sort the array based on a search term
@@ -57,7 +79,7 @@ export class CheatSheetCardsComponent implements OnInit {
 
       return { columnItem: sortedColumnItem };
     });
-    console.log(sortedColumns);
+    //console.log(sortedColumns);
     return { columns: sortedColumns };
   }
 }

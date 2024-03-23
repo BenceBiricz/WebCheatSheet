@@ -11,6 +11,8 @@ import { toggleOverlay } from '../../store/actions/overlay-open-action';
 })
 export class ExtraOverlayComponent {
   @Input() choosenItem: string = '';
+  @Input() codeSnippet: string = '';
+  @Input() description: string = '';
 
   myBoolean$: Observable<boolean>;
 

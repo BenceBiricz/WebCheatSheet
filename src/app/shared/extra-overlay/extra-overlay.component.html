@@ -6,7 +6,7 @@
     class="d-flex flex-column justify-content-center align-items-center gap-3"
   >
     <div class="d-flex w-100 align-items-center justify-content-between px-4">
-      <div></div>
+      <div class="p-4"></div>
       <h4>{{ choosenItem }}</h4>
       <button class="btn text-light" (click)="toggleBoolean()">
         <i class="bi bi-x-circle h2"></i>
@@ -18,12 +18,12 @@
     >
       <div class="content">
         <h5>Code snippet</h5>
-        <textarea class="my-textarea" rows="5"></textarea>
+        <textarea class="my-textarea p-3" rows="5">{{ codeSnippet }}</textarea>
       </div>
 
       <div class="content">
         <h5>Description</h5>
-        <textarea class="my-textarea" rows="5"></textarea>
+        <div class="description-content p-3">{{ description }}</div>
       </div>
     </div>
   </div>

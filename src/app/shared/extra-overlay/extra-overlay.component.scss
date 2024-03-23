@@ -13,6 +13,14 @@
   resize: none;
 }
 
+.description-content {
+  width: 100%;
+  min-height: 30vh;
+  border-radius: 8px;
+  background-color: white !important;
+  color: black;
+}
+
 button {
   transition: transform 0.4s, color 0.4s;
 }
