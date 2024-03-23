@@ -5,43 +5,156 @@
         {
           "title": "Selectors",
           "items": [
-            "Type",
-            "Class",
-            "ID",
-            "Universal",
-            "Attribute",
-            "Pseudo-classes",
-            "Pseudo-elements"
+            {
+              "name": "Type",
+              "codeSnippet": "element {\n\t/* CSS styles */\n}",
+              "description": "The Type selector selects all elements of a specified type. For example, 'p' selects all <p> elements."
+            },
+            {
+              "name": "Class",
+              "codeSnippet": ".className {\n\t/* CSS styles */\n}",
+              "description": "The Class selector selects all elements with a specific class attribute. For example, '.example' selects all elements with class='example'."
+            },
+            {
+              "name": "ID",
+              "codeSnippet": "#elementID {\n\t/* CSS styles */\n}",
+              "description": "The ID selector selects a single element with a specific ID attribute. For example, '#header' selects the element with id='header'."
+            },
+            {
+              "name": "Universal",
+              "codeSnippet": "* {\n\t/* CSS styles */\n}",
+              "description": "The Universal selector selects all elements in the document. For example, '*' selects all elements."
+            },
+            {
+              "name": "Attribute",
+              "codeSnippet": "[attribute] {\n\t/* CSS styles */\n}",
+              "description": "The Attribute selector selects elements based on the presence or value of attributes. For example, '[href]' selects all elements with a 'href' attribute."
+            },
+            {
+              "name": "Pseudo-classes",
+              "codeSnippet": "selector:pseudo-class {\n\t/* CSS styles */\n}",
+              "description": "The Pseudo-classes selector selects elements based on their state or position. For example, ':hover' selects elements when they are being hovered over by the mouse."
+            },
+            {
+              "name": "Pseudo-elements",
+              "codeSnippet": "selector::pseudo-element {\n\t/* CSS styles */\n}",
+              "description": "The Pseudo-elements selector selects and styles parts of elements. For example, '::before' inserts content before the selected element."
+            }
           ]
         },
         {
           "title": "Length units",
-          "items": ["Px", "Em", "Rem", "Percent"]
+          "items": [
+            {
+              "name": "Px",
+              "codeSnippet": "width: 100px;\nheight: 50px;",
+              "description": "The 'px' unit represents pixels, which are fixed-size units of measurement. One pixel is equal to one dot on a computer screen."
+            },
+            {
+              "name": "Em",
+              "codeSnippet": "font-size: 1.2em;\nmargin-left: 2em;",
+              "description": "The 'em' unit is relative to the font size of the element. For example, '1em' is equal to the font size of the current element."
+            },
+            {
+              "name": "Rem",
+              "codeSnippet": "font-size: 1.5rem;\npadding: 1rem;",
+              "description": "The 'rem' unit is relative to the font size of the root element (<html>). It provides a consistent size across the entire document."
+            },
+            {
+              "name": "Percent",
+              "codeSnippet": "width: 50%;\nheight: 75%;",
+              "description": "The 'percent' unit represents a percentage of the parent element's size. For example, '50%' means half the size of the parent element."
+            }
+          ]
         },
         {
           "title": "Font properties",
           "items": [
-            "Font-family",
-            "Font-size",
-            "Font-weight",
-            "Font-style",
-            "Text-transform",
-            "Text-decoration",
-            "Line-height"
+            {
+              "name": "Font-family",
+              "codeSnippet": "font-family: Arial, sans-serif;",
+              "description": "The 'font-family' property specifies the font family or typeface of text. It allows you to specify a prioritized list of font families to be used, separated by commas."
+            },
+            {
+              "name": "Font-size",
+              "codeSnippet": "font-size: 16px;",
+              "description": "The 'font-size' property sets the size of the text. It can be specified in various units such as pixels (px), points (pt), or ems (em)."
+            },
+            {
+              "name": "Font-weight",
+              "codeSnippet": "font-weight: bold;",
+              "description": "The 'font-weight' property sets the weight or thickness of the font. Common values include 'normal', 'bold', 'lighter', and 'bolder'."
+            },
+            {
+              "name": "Font-style",
+              "codeSnippet": "font-style: italic;",
+              "description": "The 'font-style' property specifies the style of the font, such as normal, italic, or oblique. Italicized text is typically displayed in a slanted style."
+            },
+            {
+              "name": "Text-transform",
+              "codeSnippet": "text-transform: uppercase;",
+              "description": "The 'text-transform' property specifies how the text should be capitalized. Common values include 'uppercase', 'lowercase', and 'capitalize'."
+            },
+            {
+              "name": "Text-decoration",
+              "codeSnippet": "text-decoration: underline;",
+              "description": "The 'text-decoration' property adds decorations to text, such as underlines, overlines, and line-throughs. It's commonly used to add emphasis or indicate links."
+            },
+            {
+              "name": "Line-height",
+              "codeSnippet": "line-height: 1.5;",
+              "description": "The 'line-height' property sets the height of a line box, which affects the spacing between lines of text. It can be specified as a number, percentage, or length."
+            }
           ]
         },
         {
           "title": "Flexbox",
           "items": [
-            "Flex container",
-            "Flex items",
-            "Flex-grow",
-            "Flex-shrink",
-            "Flex-basis",
-            "Flex-wrap",
-            "Align-items",
-            "Align-self",
-            "Justify-content"
+            {
+              "name": "Flex container",
+              "codeSnippet": "display: flex;",
+              "description": "The 'display: flex;' property is applied to a container to enable flexbox layout. It establishes a flex container, enabling its children to become flexible items."
+            },
+            {
+              "name": "Flex items",
+              "codeSnippet": "flex: 1;",
+              "description": "The 'flex' property is applied to flex items within a flex container. It specifies how a flex item grows, shrinks, or stays the same size relative to other flex items."
+            },
+            {
+              "name": "Flex-grow",
+              "codeSnippet": "flex-grow: 1;",
+              "description": "The 'flex-grow' property determines how much a flex item should grow relative to the other flex items in the flex container. It specifies the proportion of available space."
+            },
+            {
+              "name": "Flex-shrink",
+              "codeSnippet": "flex-shrink: 1;",
+              "description": "The 'flex-shrink' property determines how much a flex item should shrink relative to the other flex items in the flex container. It specifies the proportion of available space."
+            },
+            {
+              "name": "Flex-basis",
+              "codeSnippet": "flex-basis: auto;",
+              "description": "The 'flex-basis' property sets the initial main size of a flex item before distributing the remaining space. It can be specified as a length, percentage, or 'auto'."
+            },
+            {
+              "name": "Flex-wrap",
+              "codeSnippet": "flex-wrap: wrap;",
+              "description": "The 'flex-wrap' property determines whether flex items are forced onto a single line or can wrap onto multiple lines. It allows flex items to wrap when they exceed the container's width."
+            },
+            {
+              "name": "Align-items",
+              "codeSnippet": "align-items: center;",
+              "description": "The 'align-items' property aligns flex items along the cross-axis of the flex container. It specifies how flex items are aligned vertically within the flex container."
+            },
+            {
+              "name": "Align-self",
+              "codeSnippet": "align-self: flex-start;",
+              "description": "The 'align-self' property allows a single flex item to override the 'align-items' property for its own alignment along the cross-axis."
+            },
+            {
+              "name": "Justify-content",
+              "codeSnippet": "justify-content: center;",
+              "description": "The 'justify-content' property aligns flex items along the main-axis of the flex container. It specifies how flex items are distributed within the flex container."
+            }
           ]
         }
       ]
@@ -50,40 +163,167 @@
       "columnItem": [
         {
           "title": "Properties",
-          "items": ["Color", "Background", "Font", "Text", "Clear"]
+          "items": [
+            {
+              "name": "Color",
+              "codeSnippet": "color: #000000;",
+              "description": "The 'color' property sets the color of text content. It can be specified using keywords, hexadecimal, RGB, or HSL values."
+            },
+            {
+              "name": "Background",
+              "codeSnippet": "background-color: #FFFFFF;",
+              "description": "The 'background-color' property sets the background color of an element. It can be specified using keywords, hexadecimal, RGB, or HSL values."
+            },
+            {
+              "name": "Font",
+              "codeSnippet": "font-family: Arial, sans-serif;",
+              "description": "The 'font-family' property specifies the font family or typeface of text. It allows you to specify a prioritized list of font families to be used, separated by commas."
+            },
+            {
+              "name": "Text",
+              "codeSnippet": "text-decoration: underline;",
+              "description": "The 'text-decoration' property adds decorations to text, such as underlines, overlines, and line-throughs. It's commonly used to add emphasis or indicate links."
+            },
+            {
+              "name": "Clear",
+              "codeSnippet": "clear: both;",
+              "description": "The 'clear' property specifies whether an element allows floating elements on its sides. It determines whether the element should be moved below the floating elements."
+            }
+          ]
         },
         {
           "title": "Colors",
-          "items": ["Hexadecimal", "RGB", "RGBA", "HSL", "HSLA"]
+          "items": [
+            {
+              "name": "Hexadecimal",
+              "codeSnippet": "#000000",
+              "description": "Hexadecimal color codes represent colors using six hexadecimal digits (0-9, A-F), where each pair represents the intensity of red, green, and blue respectively."
+            },
+            {
+              "name": "RGB",
+              "codeSnippet": "rgb(0, 0, 0)",
+              "description": "RGB color values specify colors using the red, green, and blue channels. Each channel's intensity can range from 0 to 255, where 0 represents no intensity and 255 represents full intensity."
+            },
+            {
+              "name": "RGBA",
+              "codeSnippet": "rgba(0, 0, 0, 0.5)",
+              "description": "RGBA color values are similar to RGB but include an additional parameter for alpha (transparency) channel. The alpha value ranges from 0 (fully transparent) to 1 (fully opaque)."
+            },
+            {
+              "name": "HSL",
+              "codeSnippet": "hsl(0, 100%, 50%)",
+              "description": "HSL color values represent colors using hue, saturation, and lightness. Hue is expressed in degrees (0 to 360), saturation and lightness are expressed as percentages."
+            },
+            {
+              "name": "HSLA",
+              "codeSnippet": "hsla(0, 100%, 50%, 0.5)",
+              "description": "HSLA color values are similar to HSL but include an additional parameter for alpha (transparency) channel. The alpha value ranges from 0 (fully transparent) to 1 (fully opaque)."
+            }
+          ]
         },
         {
           "title": "Text properties",
           "items": [
-            "Color",
-            "Text-align",
-            "Text-shadow",
-            "Letter-spacing",
-            "Word-spacing",
-            "Text-overflow",
-            "White-space",
-            "Overflow-wrap"
+            {
+              "name": "Color",
+              "codeSnippet": "color: #000000;",
+              "description": "The 'color' property sets the color of text content. It can be specified using keywords, hexadecimal, RGB, or HSL values."
+            },
+            {
+              "name": "Text-align",
+              "codeSnippet": "text-align: center;",
+              "description": "The 'text-align' property specifies the horizontal alignment of text content within its containing element. It can be set to left, right, center, or justified."
+            },
+            {
+              "name": "Text-shadow",
+              "codeSnippet": "text-shadow: 2px 2px 4px #000000;",
+              "description": "The 'text-shadow' property adds shadows to text content. It accepts values for horizontal and vertical offsets, blur radius, and color."
+            },
+            {
+              "name": "Letter-spacing",
+              "codeSnippet": "letter-spacing: 1px;",
+              "description": "The 'letter-spacing' property adjusts the spacing between characters in text content. It can be set to a length value or 'normal'."
+            },
+            {
+              "name": "Word-spacing",
+              "codeSnippet": "word-spacing: 2px;",
+              "description": "The 'word-spacing' property adjusts the spacing between words in text content. It can be set to a length value or 'normal'."
+            },
+            {
+              "name": "Text-overflow",
+              "codeSnippet": "text-overflow: ellipsis;",
+              "description": "The 'text-overflow' property specifies how overflowed content should be indicated when it's clipped. It can be set to 'clip' or 'ellipsis'."
+            },
+            {
+              "name": "White-space",
+              "codeSnippet": "white-space: nowrap;",
+              "description": "The 'white-space' property controls how white space characters within an element are handled. It can be set to 'normal', 'nowrap', 'pre', 'pre-wrap', or 'pre-line'."
+            },
+            {
+              "name": "Overflow-wrap",
+              "codeSnippet": "overflow-wrap: break-word;",
+              "description": "The 'overflow-wrap' property specifies whether or not the browser should insert line breaks within words to prevent overflow. It can be set to 'normal' or 'break-word'."
+            }
           ]
         },
-
         {
-          "title": "Grid ",
+          "title": "Grid",
           "items": [
-            "Grid container",
-            "Grid items",
-            "Grid-template-rows",
-            "Grid-template-columns",
-            "Grid-template-areas",
-            "Grid-gap",
-            "Grid-row-gap",
-            "Grid-column-gap",
-            "Grid-auto-rows",
-            "Grid-auto-columns",
-            "Grid-auto-flow"
+            {
+              "name": "Grid container",
+              "codeSnippet": "display: grid;",
+              "description": "The 'display: grid;' property is applied to a container to enable grid layout. It establishes a grid container, enabling its children to become grid items."
+            },
+            {
+              "name": "Grid items",
+              "codeSnippet": "grid-column: span 2;\ngrid-row: 1 / 3;",
+              "description": "The 'grid-column' and 'grid-row' properties specify the placement of grid items within a grid container. They determine the size and position of grid items."
+            },
+            {
+              "name": "Grid-template-rows",
+              "codeSnippet": "grid-template-rows: 100px 200px;",
+              "description": "The 'grid-template-rows' property defines the size of each row in a grid layout. It accepts a list of row sizes, specified as lengths, percentages, or 'auto'."
+            },
+            {
+              "name": "Grid-template-columns",
+              "codeSnippet": "grid-template-columns: 1fr 2fr;",
+              "description": "The 'grid-template-columns' property defines the size of each column in a grid layout. It accepts a list of column sizes, specified as lengths, percentages, or 'fr' units."
+            },
+            {
+              "name": "Grid-template-areas",
+              "codeSnippet": "grid-template-areas:\n  'header header'\n  'sidebar content'\n  'footer footer';",
+              "description": "The 'grid-template-areas' property assigns named grid areas to the grid items within a grid layout. It defines the layout of the grid by specifying the placement of grid items."
+            },
+            {
+              "name": "Grid-gap",
+              "codeSnippet": "grid-gap: 10px;",
+              "description": "The 'grid-gap' property sets the gap (space) between grid rows and columns in a grid layout. It's a shorthand for 'grid-row-gap' and 'grid-column-gap'."
+            },
+            {
+              "name": "Grid-row-gap",
+              "codeSnippet": "grid-row-gap: 20px;",
+              "description": "The 'grid-row-gap' property sets the gap (space) between grid rows in a grid layout. It defines the spacing between adjacent rows."
+            },
+            {
+              "name": "Grid-column-gap",
+              "codeSnippet": "grid-column-gap: 15px;",
+              "description": "The 'grid-column-gap' property sets the gap (space) between grid columns in a grid layout. It defines the spacing between adjacent columns."
+            },
+            {
+              "name": "Grid-auto-rows",
+              "codeSnippet": "grid-auto-rows: minmax(100px, auto);",
+              "description": "The 'grid-auto-rows' property sets the size of automatically generated rows in a grid layout. It specifies the minimum and maximum size of rows created by implicit grid tracks."
+            },
+            {
+              "name": "Grid-auto-columns",
+              "codeSnippet": "grid-auto-columns: 100px;",
+              "description": "The 'grid-auto-columns' property sets the size of automatically generated columns in a grid layout. It specifies the width of columns created by implicit grid tracks."
+            },
+            {
+              "name": "Grid-auto-flow",
+              "codeSnippet": "grid-auto-flow: dense;",
+              "description": "The 'grid-auto-flow' property controls the placement of grid items that are not explicitly placed in the grid. It determines how auto-placed items are added to the grid."
+            }
           ]
         }
       ]
@@ -93,38 +333,147 @@
         {
           "title": "Animation",
           "items": [
-            "Keyframes",
-            "Timing-function",
-            "Duration",
-            "Timing-function",
-            "Delay",
-            "Iteration-count",
-            "Direction",
-            "Fill-mode",
-            "Play-state"
+            {
+              "name": "Keyframes",
+              "codeSnippet": "@keyframes slide {\n  from { left: 0; }\n  to { left: 100px; }\n}",
+              "description": "The '@keyframes' rule specifies the animation sequence by defining keyframes. It allows you to create customized animations by specifying styles at different points in time."
+            },
+            {
+              "name": "Timing-function",
+              "codeSnippet": "animation-timing-function: ease-in-out;",
+              "description": "The 'animation-timing-function' property defines the speed curve of an animation. It determines how intermediate property values are calculated between keyframes."
+            },
+            {
+              "name": "Duration",
+              "codeSnippet": "animation-duration: 2s;",
+              "description": "The 'animation-duration' property sets the duration of an animation in seconds or milliseconds. It specifies the length of time that an animation takes to complete one cycle."
+            },
+            {
+              "name": "Delay",
+              "codeSnippet": "animation-delay: 1s;",
+              "description": "The 'animation-delay' property specifies the delay before starting an animation. It defines the length of time to wait before starting the animation after it's triggered."
+            },
+            {
+              "name": "Iteration-count",
+              "codeSnippet": "animation-iteration-count: infinite;",
+              "description": "The 'animation-iteration-count' property defines the number of times an animation cycle should be played. It can be set to a specific number or 'infinite' for continuous looping."
+            },
+            {
+              "name": "Direction",
+              "codeSnippet": "animation-direction: alternate;",
+              "description": "The 'animation-direction' property specifies whether an animation should play forwards, backwards, or alternate between the two. It controls the order and direction of animation cycles."
+            },
+            {
+              "name": "Fill-mode",
+              "codeSnippet": "animation-fill-mode: forwards;",
+              "description": "The 'animation-fill-mode' property defines how an element's styles are applied before and after the animation. It determines whether or not the styles of the target element are affected by the animation."
+            },
+            {
+              "name": "Play-state",
+              "codeSnippet": "animation-play-state: paused;",
+              "description": "The 'animation-play-state' property controls whether an animation is running or paused. It allows you to start, stop, or pause an animation dynamically using JavaScript."
+            }
           ]
         },
         {
           "title": "Color properties",
-          "items": ["Color", "Background-color", "Opacity"]
+          "items": [
+            {
+              "name": "Color",
+              "codeSnippet": "color: #000000;",
+              "description": "The 'color' property sets the color of text content. It can be specified using keywords, hexadecimal, RGB, or HSL values."
+            },
+            {
+              "name": "Background-color",
+              "codeSnippet": "background-color: #FFFFFF;",
+              "description": "The 'background-color' property sets the background color of an element. It can be specified using keywords, hexadecimal, RGB, or HSL values."
+            },
+            {
+              "name": "Opacity",
+              "codeSnippet": "opacity: 0.5;",
+              "description": "The 'opacity' property sets the transparency level of an element. It specifies the degree of opacity, where 0 is fully transparent and 1 is fully opaque."
+            }
+          ]
         },
         {
           "title": "Background properties",
           "items": [
-            "Background-image",
-            "Background-repeat",
-            "Background-position",
-            "Background-size",
-            "Background-attachment"
+            {
+              "name": "Background-image",
+              "codeSnippet": "background-image: url('example.jpg');",
+              "description": "The 'background-image' property sets one or more background images for an element. It can specify a single image or a comma-separated list of multiple images."
+            },
+            {
+              "name": "Background-repeat",
+              "codeSnippet": "background-repeat: repeat-x;",
+              "description": "The 'background-repeat' property defines how a background image is repeated within an element's background area. It can be set to repeat, repeat-x, repeat-y, or no-repeat."
+            },
+            {
+              "name": "Background-position",
+              "codeSnippet": "background-position: center top;",
+              "description": "The 'background-position' property sets the initial position of a background image within an element's background area. It can be specified using keywords, percentages, or length values."
+            },
+            {
+              "name": "Background-size",
+              "codeSnippet": "background-size: cover;",
+              "description": "The 'background-size' property specifies the size of a background image relative to the element's background area. It can be set to auto, contain, cover, or specific dimensions."
+            },
+            {
+              "name": "Background-attachment",
+              "codeSnippet": "background-attachment: fixed;",
+              "description": "The 'background-attachment' property determines whether a background image scrolls with the content or remains fixed within the viewport. It can be set to scroll or fixed."
+            }
           ]
         },
         {
           "title": "Transforms",
-          "items": ["Translate", "Rotate", "Scale", "Skew"]
+          "items": [
+            {
+              "name": "Translate",
+              "codeSnippet": "transform: translate(50px, 100px);",
+              "description": "The 'translate()' function moves an element along the X and Y axes. It shifts the element horizontally by the first value and vertically by the second value."
+            },
+            {
+              "name": "Rotate",
+              "codeSnippet": "transform: rotate(45deg);",
+              "description": "The 'rotate()' function rotates an element clockwise or counterclockwise by the specified angle. It accepts an angle value in degrees or radians."
+            },
+            {
+              "name": "Scale",
+              "codeSnippet": "transform: scale(2);",
+              "description": "The 'scale()' function changes the size of an element. It scales the element by the specified factor along both the X and Y axes."
+            },
+            {
+              "name": "Skew",
+              "codeSnippet": "transform: skew(30deg, 20deg);",
+              "description": "The 'skew()' function distorts an element by skewing it along the X and Y axes. It tilts the element horizontally by the first angle and vertically by the second angle."
+            }
+          ]
         },
         {
           "title": "Transition",
-          "items": ["Property", "Duration", "Timing-function", "Delay"]
+          "items": [
+            {
+              "name": "Property",
+              "codeSnippet": "transition-property: opacity;",
+              "description": "The 'transition-property' property specifies the CSS properties that will be transitioned. It can be set to a single property, a comma-separated list, or 'all' to transition all properties."
+            },
+            {
+              "name": "Duration",
+              "codeSnippet": "transition-duration: 0.5s;",
+              "description": "The 'transition-duration' property sets the duration of the transition effect. It specifies the length of time that the transition takes to complete, in seconds or milliseconds."
+            },
+            {
+              "name": "Timing-function",
+              "codeSnippet": "transition-timing-function: ease-in-out;",
+              "description": "The 'transition-timing-function' property defines the speed curve of the transition effect. It determines how intermediate property values are calculated between the start and end of the transition."
+            },
+            {
+              "name": "Delay",
+              "codeSnippet": "transition-delay: 0.2s;",
+              "description": "The 'transition-delay' property specifies a delay before the transition effect starts. It determines the length of time to wait before the transition begins after the property value changes."
+            }
+          ]
         }
       ]
     },
@@ -132,24 +481,107 @@
       "columnItem": [
         {
           "title": "Positioning",
-          "items": ["static", "relative", "absolute", "fixed", "Float"]
+          "items": [
+            {
+              "name": "static",
+              "codeSnippet": "position: static;",
+              "description": "The 'static' value is the default positioning of an element. It means the element will be positioned according to the normal flow of the document, without any special positioning."
+            },
+            {
+              "name": "relative",
+              "codeSnippet": "position: relative;",
+              "description": "The 'relative' value positions an element relative to its normal position. It allows you to adjust the position of the element using the 'top', 'right', 'bottom', and 'left' properties."
+            },
+            {
+              "name": "absolute",
+              "codeSnippet": "position: absolute;",
+              "description": "The 'absolute' value positions an element relative to its nearest positioned ancestor. It removes the element from the normal document flow, so it won't affect the position of other elements."
+            },
+            {
+              "name": "fixed",
+              "codeSnippet": "position: fixed;",
+              "description": "The 'fixed' value positions an element relative to the viewport. It remains in the same position even when the page is scrolled, creating a 'floating' effect."
+            },
+            {
+              "name": "Float",
+              "codeSnippet": "float: left;",
+              "description": "The 'float' property specifies whether an element should float to the left, right, or none. It's commonly used for layout purposes, allowing elements to wrap around floated elements."
+            }
+          ]
         },
         {
           "title": "Display",
-          "items": ["Block", "Inline", "Inline-block", "Flex", "Grid"]
+          "items": [
+            {
+              "name": "Block",
+              "codeSnippet": "display: block;",
+              "description": "The 'block' value makes an element a block-level element, creating a line break before and after the element. It takes up the full width available and stacks vertically."
+            },
+            {
+              "name": "Inline",
+              "codeSnippet": "display: inline;",
+              "description": "The 'inline' value makes an element an inline-level element, allowing it to flow within text content. It doesn't create line breaks and only takes up the necessary width."
+            },
+            {
+              "name": "Inline-block",
+              "codeSnippet": "display: inline-block;",
+              "description": "The 'inline-block' value combines the features of block and inline elements. It allows the element to flow inline like an inline element while maintaining block-like properties."
+            },
+            {
+              "name": "Flex",
+              "codeSnippet": "display: flex;",
+              "description": "The 'flex' value enables a flex container, allowing its children to be laid out in a flexbox layout. It provides powerful alignment and distribution capabilities for flexible layouts."
+            },
+            {
+              "name": "Grid",
+              "codeSnippet": "display: grid;",
+              "description": "The 'grid' value enables a grid container, allowing its children to be laid out in a grid layout. It provides precise control over rows, columns, and their alignment."
+            }
+          ]
         },
         {
           "title": "Shadow",
-          "items": ["Box-shadow", "Text-shadow"]
+          "items": [
+            {
+              "name": "Box-shadow",
+              "codeSnippet": "box-shadow: 5px 5px 10px #888888;",
+              "description": "The 'box-shadow' property adds a shadow effect to an element's box. It accepts values for horizontal and vertical offset, blur radius, spread radius, and color."
+            },
+            {
+              "name": "Text-shadow",
+              "codeSnippet": "text-shadow: 2px 2px 4px #000000;",
+              "description": "The 'text-shadow' property adds a shadow effect to text. It accepts values for horizontal and vertical offset, blur radius, and color."
+            }
+          ]
         },
         {
           "title": "Responsive Design",
           "items": [
-            "Media Queries",
-            "Screen sizes",
-            "Device orientation",
-            "Resolution",
-            "Viewport Meta Tag"
+            {
+              "name": "Media Queries",
+              "codeSnippet": "@media screen and (max-width: 768px) {\n  /* Styles for screens up to 768px wide */\n}",
+              "description": "Media queries allow you to apply CSS styles based on conditions such as screen size, device orientation, resolution, and more. They enable the creation of responsive layouts that adapt to different devices and screen sizes."
+            },
+            {
+              "name": "Screen sizes",
+              "codeSnippet": "/* CSS rules for different screen sizes */",
+              "description": "Responsive design involves designing layouts that adjust to various screen sizes, including desktops, tablets, and mobile devices. CSS can be used to define styles specific to different screen sizes."
+            },
+            {
+              "name": "Device orientation",
+              "codeSnippet": "@media screen and (orientation: landscape) {\n  /* Styles for landscape orientation */\n}",
+              "description": "Media queries can target device orientation, allowing you to apply different styles based on whether the device is in landscape or portrait mode. This is useful for optimizing layouts for different viewing experiences."
+            },
+            {
+              "name": "Resolution",
+              "codeSnippet": "@media screen and (min-resolution: 300dpi) {\n  /* Styles for high-resolution displays */\n}",
+              "description": "Media queries can also target display resolution, allowing you to apply styles specifically for high-resolution screens. This ensures that content looks crisp and sharp on devices with high pixel densities."
+            },
+            {
+              "name": "Viewport Meta Tag",
+              "codeSnippet": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+              "description": "The viewport meta tag controls the viewport properties of a web page, such as width, initial scale, and minimum-scale. It's essential for creating responsive designs that adapt to various device screen sizes."
+            }
           ]
         }
       ]

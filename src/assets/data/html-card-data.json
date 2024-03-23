@@ -4,22 +4,73 @@
       "columnItem": [
         {
           "title": "Basics",
-          "items": ["<!DOCTYPE>", "<html>", "<head>", "<body>"],
-          "test": [
+          "items": [
             {
               "name": "<!DOCTYPE>",
-              "codeSnippet": "code snippet from json",
-              "description": "desc from json"
+              "codeSnippet": "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Your Title Here</title>\n\t</head>\n\t<body>\n\t\t<h1>Hello, World!</h1>\n\t\t<p>This is a basic HTML document with a DOCTYPE declaration.</p>\n\t</body>\n</html>",
+              "description": "The <!DOCTYPE> declaration is used to specify the document type and version of HTML being used. In this snippet, <!DOCTYPE html> specifies HTML5, which is the latest version of HTML. This declaration should be the first thing in an HTML document, before the <html> tag. It ensures that the browser renders the document in standards mode, preventing compatibility issues."
+            },
+            {
+              "name": "<html>",
+              "codeSnippet": "<html>\n\t<!-- HTML document structure -->\n\t<head>\n\t\t<title>Your Title Here</title>\n\t</head>\n\t<body>\n\t\t<h1>Hello, World!</h1>\n\t\t<p>This is a basic HTML document.</p>\n\t</body>\n</html>",
+              "description": "The <html> element represents the root of an HTML document. It encloses all the content of the document, including the <head> and <body> sections. In this snippet, the <html> tag is part of the overall HTML document structure."
+            },
+            {
+              "name": "<head>",
+              "codeSnippet": "<head>\n\t<!-- Metadata and document settings -->\n\t<title>Your Title Here</title>\n</head>",
+              "description": "The <head> element is a container for metadata about the HTML document. It typically contains elements such as <title>, <meta>, <link>, <style>, and <script>. In this snippet, the <head> section includes a <title> element."
+            },
+            {
+              "name": "<body>",
+              "codeSnippet": "<body>\n\t<!-- Visible content of the HTML document -->\n\t<h1>Hello, World!</h1>\n\t<p>This is a basic HTML document.</p>\n</body>",
+              "description": "The <body> element contains the visible content of the HTML document, such as text, images, links, and other elements. It typically follows the <head> section and precedes the closing </html> tag. In this snippet, the <body> element encloses the main content of the HTML document."
             }
           ]
         },
         {
           "title": "Text and Formatting",
-          "items": ["<h1>-<h6>", "<p>", "<br>", "<hr>"]
+          "items": [
+            {
+              "name": "<h1>-<h6>",
+              "codeSnippet": "<h1>Heading 1</h1>",
+              "description": "The <h1>-<h6> elements represent six levels of section headings, where <h1> is the highest level and <h6> is the lowest."
+            },
+            {
+              "name": "<p>",
+              "codeSnippet": "<p>This is a paragraph.</p>",
+              "description": "The <p> element represents a paragraph of text."
+            },
+            {
+              "name": "<br>",
+              "codeSnippet": "<p>First line<br>Second line</p>",
+              "description": "The <br> element represents a line break within a paragraph."
+            },
+            {
+              "name": "<hr>",
+              "codeSnippet": "<hr>",
+              "description": "The <hr> element represents a thematic break or separation in content."
+            }
+          ]
         },
         {
           "title": "Interactive Elements",
-          "items": ["<button>", "<input type=>", "<label>"]
+          "items": [
+            {
+              "name": "<button>",
+              "codeSnippet": "<button>Click Me</button>",
+              "description": "The <button> element represents a clickable button."
+            },
+            {
+              "name": "<input type=>",
+              "codeSnippet": "<input type='text'>",
+              "description": "The <input> element is used to create interactive controls for web-based forms. The 'type' attribute specifies the type of input control."
+            },
+            {
+              "name": "<label>",
+              "codeSnippet": "<label for='inputField'>Input Field:</label>",
+              "description": "The <label> element represents a label for an <input> element. The 'for' attribute specifies which form element the label is bound to."
+            }
+          ]
         }
       ]
     },
@@ -27,15 +78,78 @@
       "columnItem": [
         {
           "title": "Tables",
-          "items": ["<table>", "<tr>", "<td>", "<th>"]
+          "items": [
+            {
+              "name": "<table>",
+              "codeSnippet": "<table>\n\t<tr>\n\t\t<th>Header 1</th>\n\t\t<th>Header 2</th>\n\t</tr>\n\t<tr>\n\t\t<td>Row 1, Cell 1</td>\n\t\t<td>Row 1, Cell 2</td>\n\t</tr>\n</table>",
+              "description": "The <table> element represents tabular data."
+            },
+            {
+              "name": "<tr>",
+              "codeSnippet": "<tr>\n\t<td>Row 1, Cell 1</td>\n\t<td>Row 1, Cell 2</td>\n</tr>",
+              "description": "The <tr> element represents a row in a table."
+            },
+            {
+              "name": "<td>",
+              "codeSnippet": "<td>Cell Content</td>",
+              "description": "The <td> element represents a data cell in a table."
+            },
+            {
+              "name": "<th>",
+              "codeSnippet": "<th>Table Header</th>",
+              "description": "The <th> element represents a header cell in a table."
+            }
+          ]
         },
         {
           "title": "Forms",
-          "items": ["<form>", "<input>", "<textarea>", "<select>", "<button>"]
+          "items": [
+            {
+              "name": "<form>",
+              "codeSnippet": "<form action='/submit' method='post'></form>",
+              "description": "The <form> element represents a form for user input. The 'action' attribute specifies where to send the form data, and the 'method' attribute specifies the HTTP method to use for sending the form data."
+            },
+            {
+              "name": "<input>",
+              "codeSnippet": "<input type='text' name='username'>",
+              "description": "The <input> element represents an input control. The 'type' attribute specifies the type of input control, and the 'name' attribute specifies the name of the input control."
+            },
+            {
+              "name": "<textarea>",
+              "codeSnippet": "<textarea rows='4' cols='50'></textarea>",
+              "description": "The <textarea> element represents a multi-line text input control. The 'rows' and 'cols' attributes specify the visible height and width of the textarea."
+            },
+            {
+              "name": "<select>",
+              "codeSnippet": "<select>\n\t<option value='1'>Option 1</option>\n\t<option value='2'>Option 2</option}\n\t<option value='3'>Option 3</option>\n</select>",
+              "description": "The <select> element represents a control for selecting among a set of options. Each <option> element within the <select> represents an option in the dropdown list."
+            },
+            {
+              "name": "<button>",
+              "codeSnippet": "<button type='submit'>Submit</button>",
+              "description": "The <button> element represents a clickable button. The 'type' attribute specifies the type of button, such as 'submit', 'reset', or 'button'."
+            }
+          ]
         },
         {
           "title": "Audio and Video",
-          "items": ["<audio>", "<video>", "<source>", "<select>"]
+          "items": [
+            {
+              "name": "<audio>",
+              "codeSnippet": "<audio controls>\n\t<source src='audio.mp3' type='audio/mpeg'>\n</audio>",
+              "description": "The <audio> element embeds audio content in an HTML document. The 'controls' attribute adds audio controls, such as play, pause, and volume."
+            },
+            {
+              "name": "<video>",
+              "codeSnippet": "<video controls>\n\t<source src='video.mp4' type='video/mp4'>\n</video>",
+              "description": "The <video> element embeds video content in an HTML document. The 'controls' attribute adds video controls, such as play, pause, and volume."
+            },
+            {
+              "name": "<source>",
+              "codeSnippet": "<video controls>\n\t<source src='video.mp4' type='video/mp4'>\n\t<source src='video.webm' type='video/webm'>\n</video>",
+              "description": "The <source> element specifies multiple media resources for <audio> and <video> elements. Browsers will choose the first source they support."
+            }
+          ]
         }
       ]
     },
@@ -43,17 +157,57 @@
       "columnItem": [
         {
           "title": "Links and Images",
-          "items": ["<a>", "<img>", "<figure>", "<figcaption>"]
+          "items": [
+            {
+              "name": "<a>",
+              "codeSnippet": "<a href='https://example.com'>Link Text</a>",
+              "description": "The <a> element represents a hyperlink, linking to another document or resource. The 'href' attribute specifies the URL of the linked resource."
+            },
+            {
+              "name": "<img>",
+              "codeSnippet": "<img src='image.jpg' alt='Image Description'>",
+              "description": "The <img> element embeds an image in an HTML document. The 'src' attribute specifies the URL of the image, and the 'alt' attribute provides alternative text for accessibility."
+            },
+            {
+              "name": "<figure>",
+              "codeSnippet": "<figure>\n\t<img src='image.jpg' alt='Image Description'>\n\t<figcaption>Image Caption</figcaption>\n</figure>",
+              "description": "The <figure> element represents self-contained content, such as images, diagrams, illustrations, code listings, etc. The <figcaption> element provides a caption for the content."
+            }
+          ]
         },
         {
           "title": "Semantic HTML",
           "items": [
-            "<header>",
-            "<nav>",
-            "<section>",
-            "<article>",
-            "<aside>",
-            "<footer>"
+            {
+              "name": "<header>",
+              "codeSnippet": "<header>\n\t<h1>Header Title</h1>\n</header>",
+              "description": "The <header> element represents introductory content at the beginning of a section or page. It often contains headings, navigation links, logos, etc."
+            },
+            {
+              "name": "<nav>",
+              "codeSnippet": "<nav>\n\t<ul>\n\t\t<li><a href='#'>Link 1</a></li>\n\t\t<li><a href='#'>Link 2</a></li>\n\t</ul>\n</nav>",
+              "description": "The <nav> element represents a section of navigation links. It typically contains lists of links to other pages or sections within the site."
+            },
+            {
+              "name": "<section>",
+              "codeSnippet": "<section>\n\t<h2>Section Title</h2>\n\t<p>Section Content</p>\n</section>",
+              "description": "The <section> element represents a thematic grouping of content, typically with a heading. It's used to organize content into meaningful sections."
+            },
+            {
+              "name": "<article>",
+              "codeSnippet": "<article>\n\t<h2>Article Title</h2>\n\t<p>Article Content</p>\n</article>",
+              "description": "The <article> element represents self-contained content that could be independently distributed or reused, such as blog posts, news articles, forum posts, etc."
+            },
+            {
+              "name": "<aside>",
+              "codeSnippet": "<aside>\n\t<h3>Aside Title</h3>\n\t<p>Aside Content</p>\n</aside>",
+              "description": "The <aside> element represents content related to the main content but not essential to its understanding. It often contains tangentially related content, such as sidebars, pull quotes, etc."
+            },
+            {
+              "name": "<footer>",
+              "codeSnippet": "<footer>\n\t<p>Footer Content &copy; 2024</p>\n</footer>",
+              "description": "The <footer> element represents a footer for its nearest sectioning content or sectioning root. It typically contains information about the author, copyright, contact information, etc."
+            }
           ]
         }
       ]
@@ -62,11 +216,48 @@
       "columnItem": [
         {
           "title": "Lists",
-          "items": ["<ul>", "<ol>", "<li>"]
+          "items": [
+            {
+              "name": "<ul>",
+              "codeSnippet": "<ul>\n\t<li>Item 1</li>\n\t<li>Item 2</li>\n</ul>",
+              "description": "The <ul> element represents an unordered list of items. Each item is typically marked with a bullet point or similar marker."
+            },
+            {
+              "name": "<ol>",
+              "codeSnippet": "<ol>\n\t<li>Item 1</li>\n\t<li>Item 2</li>\n</ol>",
+              "description": "The <ol> element represents an ordered list of items. Each item is typically marked with a number or similar marker."
+            },
+            {
+              "name": "<li>",
+              "codeSnippet": "<ul>\n\t<li>Item 1</li>\n\t<li>Item 2</li>\n</ul>",
+              "description": "The <li> element represents a list item within an ordered or unordered list."
+            }
+          ]
         },
         {
           "title": "Metadata and Embedding",
-          "items": ["<meta>", "<link>", "<script>", "<style>"]
+          "items": [
+            {
+              "name": "<meta>",
+              "codeSnippet": "<meta charset='UTF-8'>",
+              "description": "The <meta> element represents metadata that cannot be represented by other HTML meta-related elements. In this snippet, the 'charset' attribute specifies the character encoding for the document."
+            },
+            {
+              "name": "<link>",
+              "codeSnippet": "<link rel='stylesheet' href='styles.css'>",
+              "description": "The <link> element defines relationships between the current document and external resources. In this snippet, it's used to link an external stylesheet to the HTML document."
+            },
+            {
+              "name": "<script>",
+              "codeSnippet": "<script src='script.js'></script>",
+              "description": "The <script> element is used to embed or reference executable code, typically JavaScript, within an HTML document. In this snippet, it's used to link an external JavaScript file."
+            },
+            {
+              "name": "<style>",
+              "codeSnippet": "<style>\n\t/* CSS styles */\n\tbody { font-family: Arial, sans-serif; }\n</style>",
+              "description": "The <style> element contains CSS rules for styling the HTML document. It can be placed in the <head> section or directly within the HTML document."
+            }
+          ]
         }
       ]
     }

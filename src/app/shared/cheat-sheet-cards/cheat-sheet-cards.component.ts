@@ -16,6 +16,8 @@ export class CheatSheetCardsComponent implements OnInit {
   @Input() dataPath: string = '';
   data: any;
   itemName: string = '';
+  codeSnippet: string = '';
+  description: string = '';
 
   myBoolean$: Observable<boolean>;
   overlayOpenState: boolean = false;
@@ -29,22 +31,6 @@ export class CheatSheetCardsComponent implements OnInit {
       .get('assets/data/' + this.dataPath + '.json')
       .subscribe((data: any) => {
         this.data = data!.columns;
-
-        var columnsArray = this.data;
-
-        for (let i = 0; i < columnsArray.length; i++) {
-          for (let j = 0; j < columnsArray[i].columnItem.length; j++) {
-            for (
-              let k = 0;
-              k < columnsArray[0].columnItem[0].test.length;
-              k++
-            ) {
-              if (columnsArray[0].columnItem[0].test[k].name === '<!DOCTYPE>') {
-                console.log(columnsArray[0].columnItem[0].test[k].codeSnippet);
-              }
-            }
-          }
-        }
       });
   }
 
@@ -52,6 +38,21 @@ export class CheatSheetCardsComponent implements OnInit {
     this.store.dispatch(toggleOverlay());
 
     this.itemName = itemName;
+
+    var columnsArray = this.data;
+
+    for (let i = 0; i < columnsArray.length; i++) {
+      for (let j = 0; j < columnsArray[i].columnItem.length; j++) {
+        for (let k = 0; k < columnsArray[i].columnItem[j].items.length; k++) {
+          if (columnsArray[i].columnItem[j].items[k].name === itemName) {
+            this.codeSnippet =
+              columnsArray[i].columnItem[j].items[k].codeSnippet;
+            this.description =
+              columnsArray[i].columnItem[j].items[k].description;
+          }
+        }
+      }
+    }
   }
 
   searchText(val: any) {

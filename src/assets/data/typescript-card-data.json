@@ -5,30 +5,96 @@
         {
           "title": "Types",
           "items": [
-            "Number",
-            "String",
-            "Boolean",
-            "Array",
-            "Tuple",
-            "Enum",
-            "Any",
-            "Void",
-            "Null",
-            "Undefined",
-            "Never"
+            {
+              "name": "Number",
+              "codeSnippet": "let myNumber: number = 10;",
+              "description": "Represents numeric values, including integers and floating-point numbers."
+            },
+            {
+              "name": "String",
+              "codeSnippet": "let myString: string = 'Hello';",
+              "description": "Represents textual data, enclosed in single or double quotes."
+            },
+            {
+              "name": "Boolean",
+              "codeSnippet": "let myBoolean: boolean = true;",
+              "description": "Represents a logical value, either true or false."
+            },
+            {
+              "name": "Array",
+              "codeSnippet": "let myArray: number[] = [1, 2, 3];",
+              "description": "Represents a collection of elements of the same type, indexed by numbers."
+            },
+            {
+              "name": "Tuple",
+              "codeSnippet": "let myTuple: [string, number] = ['Hello', 10];",
+              "description": "Represents an array with a fixed number of elements, each with a known type."
+            },
+            {
+              "name": "Enum",
+              "codeSnippet": "enum Color { Red, Green, Blue };",
+              "description": "Represents a set of named constants, providing more descriptive names for numeric values."
+            },
+            {
+              "name": "Any",
+              "codeSnippet": "let myAny: any = 'Hello';",
+              "description": "Represents a value of any type, allowing flexibility but sacrificing type safety."
+            },
+            {
+              "name": "Void",
+              "codeSnippet": "function myFunction(): void { /* Function body */ };",
+              "description": "Represents the absence of a type, commonly used as the return type of functions that don't return a value."
+            },
+            {
+              "name": "Null",
+              "codeSnippet": "let myNull: null = null;",
+              "description": "Represents the absence of a value, often used to indicate that a variable does not currently have a value."
+            },
+            {
+              "name": "Undefined",
+              "codeSnippet": "let myUndefined: undefined = undefined;",
+              "description": "Represents a value that has not been assigned, typically the initial value of variables."
+            },
+            {
+              "name": "Never",
+              "codeSnippet": "function throwError(message: string): never { throw new Error(message); };",
+              "description": "Represents a type that never occurs, often used to denote functions that never return or always throw errors."
+            }
           ]
         },
-
         {
           "title": "Basics",
-          "items": ["Type Annotations", "Type Inference"]
+          "items": [
+            {
+              "name": "Type Annotations",
+              "codeSnippet": "let myVariable: number;",
+              "description": "Explicitly specifying the type of a variable, parameter, or return value using syntax like 'variable: type'."
+            },
+            {
+              "name": "Type Inference",
+              "codeSnippet": "let myVariable = 'Hello';",
+              "description": "Automatically deducing the type of a variable based on its initialization value, enabling TypeScript to infer types without explicit annotations."
+            }
+          ]
         },
         {
           "title": "Decorators",
           "items": [
-            "Class decorators",
-            "Method decorators",
-            "Property decorators"
+            {
+              "name": "Class decorators",
+              "codeSnippet": "@ClassDecorator\nclass MyClass {\n\t// Class members\n}",
+              "description": "Class decorators are functions that can be used to modify the behavior of a class. They are prefixed with the '@' symbol and are applied to the declaration of a class."
+            },
+            {
+              "name": "Method decorators",
+              "codeSnippet": "class MyClass {\n\t@MethodDecorator\n\tmyMethod() {\n\t\t// Method implementation\n\t}\n}",
+              "description": "Method decorators are functions that can be used to modify the behavior of a method within a class. They are prefixed with the '@' symbol and are applied to the declaration of a method."
+            },
+            {
+              "name": "Property decorators",
+              "codeSnippet": "class MyClass {\n\t@PropertyDecorator\n\tmyProperty: string;\n}",
+              "description": "Property decorators are functions that can be used to modify the behavior of a property within a class. They are prefixed with the '@' symbol and are applied to the declaration of a property."
+            }
           ]
         }
       ]
@@ -38,24 +104,76 @@
         {
           "title": "Functions",
           "items": [
-            "Function declarations",
-            "Expressions",
-            "Optional parameters",
-            "Rest parameters",
-            "Function overloading"
+            {
+              "name": "Function declarations",
+              "description": "Functions declared using the 'function' keyword followed by the function name and parameters.",
+              "codeSnippet": "function add(a: number, b: number): number {\n\treturn a + b;\n}"
+            },
+            {
+              "name": "Expressions",
+              "description": "Functions defined as expressions, often assigned to variables or passed as arguments to other functions.",
+              "codeSnippet": "const add = function(a: number, b: number): number {\n\treturn a + b;\n};"
+            },
+            {
+              "name": "Optional parameters",
+              "description": "Function parameters that may or may not be provided when calling the function.",
+              "codeSnippet": "function greet(name?: string): string {\n\treturn name ? `Hello, ${name}!` : 'Hello!';\n}"
+            },
+            {
+              "name": "Rest parameters",
+              "description": "Function parameters that capture an indefinite number of arguments as an array.",
+              "codeSnippet": "function sum(...numbers: number[]): number {\n\treturn numbers.reduce((acc, val) => acc + val, 0);\n}"
+            },
+            {
+              "name": "Function overloading",
+              "description": "Defining multiple function signatures for a single function name, with different parameter types or counts.",
+              "codeSnippet": "function format(value: string): string;\nfunction format(value: number): string;\nfunction format(value: any): string {\n\treturn `${value}`;\n}"
+            }
           ]
         },
         {
           "title": "Generics",
-          "items": ["Generic functions", "Generic classes", "Constraints"]
+          "items": [
+            {
+              "name": "Generic functions",
+              "description": "Functions that operate on a range of data types rather than a single one, using type parameters.",
+              "codeSnippet": "function identity<T>(arg: T): T {\n\treturn arg;\n}"
+            },
+            {
+              "name": "Generic classes",
+              "description": "Classes that can work with a variety of data types, allowing flexibility and type safety.",
+              "codeSnippet": "class Box<T> {\n\tvalue: T;\n\tconstructor(value: T) {\n\t\tthis.value = value;\n\t}\n}"
+            },
+            {
+              "name": "Constraints",
+              "description": "Specifying constraints on generic type parameters to restrict the types that can be used.",
+              "codeSnippet": "function logLength<T extends { length: number }>(arg: T): void {\n\tconsole.log(arg.length);\n}"
+            }
+          ]
         },
         {
           "title": "TypeScript Compiler",
           "items": [
-            "Configuration options",
-            "Tsconfig.json file",
-            "Compilation targets",
-            "Watch mode"
+            {
+              "name": "Configuration options",
+              "description": "Various settings that can be configured to customize the behavior of the TypeScript compiler.",
+              "codeSnippet": "// Example tsconfig.json\n{\n\t\"compilerOptions\": {\n\t\t\"target\": \"es5\",\n\t\t\"module\": \"commonjs\",\n\t\t\"strict\": true\n\t}\n}"
+            },
+            {
+              "name": "Tsconfig.json file",
+              "description": "A JSON file used to specify compiler options and project settings for TypeScript projects.",
+              "codeSnippet": "// Example tsconfig.json\n{\n\t\"compilerOptions\": {\n\t\t\"target\": \"es5\",\n\t\t\"module\": \"commonjs\",\n\t\t\"strict\": true\n\t}\n}"
+            },
+            {
+              "name": "Compilation targets",
+              "description": "Specifying the version of ECMAScript that the TypeScript compiler should target when generating JavaScript output.",
+              "codeSnippet": "// Example tsconfig.json\n{\n\t\"compilerOptions\": {\n\t\t\"target\": \"es5\",\n\t\t\"module\": \"commonjs\"\n\t}\n}"
+            },
+            {
+              "name": "Watch mode",
+              "description": "A mode in which the TypeScript compiler watches files for changes and recompiles them automatically.",
+              "codeSnippet": "// Command to compile and watch files\n// tsc --watch"
+            }
           ]
         }
       ]
@@ -65,31 +183,91 @@
         {
           "title": "Interfaces",
           "items": [
-            "Declaring interfaces",
-            "Optional properties",
-            "Readonly properties",
-            "Extending interfaces",
-            "Implementing interfaces"
+            {
+              "name": "Declaring interfaces",
+              "description": "Defining a contract specifying the structure of an object, including property names and types.",
+              "codeSnippet": "interface Person {\n\tname: string;\n\tage: number;\n}"
+            },
+            {
+              "name": "Optional properties",
+              "description": "Properties in an interface that may or may not be present in objects implementing the interface.",
+              "codeSnippet": "interface Book {\n\ttitle: string;\n\tauthor?: string;\n}"
+            },
+            {
+              "name": "Readonly properties",
+              "description": "Properties in an interface that can only be assigned a value once and cannot be modified afterward.",
+              "codeSnippet": "interface Configuration {\n\treadonly server: string;\n\treadonly port: number;\n}"
+            },
+            {
+              "name": "Extending interfaces",
+              "description": "Creating new interfaces that inherit properties and methods from existing interfaces.",
+              "codeSnippet": "interface Animal {\n\tname: string;\n}\n\ninterface Dog extends Animal {\n\tbreed: string;\n}"
+            },
+            {
+              "name": "Implementing interfaces",
+              "description": "Implementing the structure defined by an interface in classes or objects.",
+              "codeSnippet": "interface Printable {\n\tprint(): void;\n}\n\nclass Document implements Printable {\n\tprint() {\n\t\tconsole.log('Printing document...');\n\t}\n}"
+            }
           ]
         },
         {
           "title": "Advanced Types",
           "items": [
-            "Union Types",
-            "Intersection Types",
-            "Type Aliases",
-            "Type Guards",
-            "Type Assertion",
-            "Discriminated Unions"
+            {
+              "name": "Union Types",
+              "description": "Types that can hold values of multiple specified types, denoted using the '|' operator.",
+              "codeSnippet": "type ID = string | number;"
+            },
+            {
+              "name": "Intersection Types",
+              "description": "Types that combine multiple types into one, representing values that have all of the specified types.",
+              "codeSnippet": "type Admin = Employee & User;"
+            },
+            {
+              "name": "Type Aliases",
+              "description": "Creating custom names for types, allowing complex types to be referenced by a single name.",
+              "codeSnippet": "type Point = [number, number];"
+            },
+            {
+              "name": "Type Guards",
+              "description": "Techniques used to narrow down the type of a variable within a conditional block.",
+              "codeSnippet": "if (typeof value === 'string') {\n\t// value is now treated as a string\n}"
+            },
+            {
+              "name": "Type Assertion",
+              "description": "Explicitly telling the TypeScript compiler that a value conforms to a specific type.",
+              "codeSnippet": "let someValue: any = 'this is a string';\nlet strLength: number = (someValue as string).length;"
+            },
+            {
+              "name": "Discriminated Unions",
+              "description": "Using a common property in interfaces to narrow down the specific type within a union of types.",
+              "codeSnippet": "interface Circle {\n\tkind: 'circle';\n\tradius: number;\n}\n\ninterface Square {\n\tkind: 'square';\n\tsideLength: number;\n}"
+            }
           ]
         },
         {
           "title": "Common Patterns",
           "items": [
-            "Singleton pattern",
-            "Factory pattern",
-            "Dependency injection",
-            "Observer pattern"
+            {
+              "name": "Singleton pattern",
+              "description": "A design pattern that restricts the instantiation of a class to a single instance.",
+              "codeSnippet": "class Singleton {\n  private static instance: Singleton;\n\n  private constructor() {}\n\n  static getInstance(): Singleton {\n    if (!Singleton.instance) {\n      Singleton.instance = new Singleton();\n    }\n    return Singleton.instance;\n  }\n}"
+            },
+            {
+              "name": "Factory pattern",
+              "description": "A design pattern that defines an interface for creating objects but allows subclasses to alter the type of objects that will be created.",
+              "codeSnippet": "interface Product {\n  operation(): string;\n}\n\nclass ConcreteProductA implements Product {\n  operation(): string {\n    return 'Product A';\n  }\n}\n\nclass ConcreteProductB implements Product {\n  operation(): string {\n    return 'Product B';\n  }\n}\n\nabstract class Creator {\n  abstract factoryMethod(): Product;\n\n  operation(): string {\n    const product = this.factoryMethod();\n    return `Creator: ${product.operation()}`;\n  }\n}\n\nclass ConcreteCreatorA extends Creator {\n  factoryMethod(): Product {\n    return new ConcreteProductA();\n  }\n}\n\nclass ConcreteCreatorB extends Creator {\n  factoryMethod(): Product {\n    return new ConcreteProductB();\n  }\n}"
+            },
+            {
+              "name": "Dependency injection",
+              "description": "A design pattern in which objects receive their dependencies from external sources rather than creating them internally.",
+              "codeSnippet": "// Service\nclass Dependency {\n  operation(): string {\n    return 'Dependency operation';\n  }\n}\n\n// Client\nclass Client {\n  private dependency: Dependency;\n\n  constructor(dependency: Dependency) {\n    this.dependency = dependency;\n  }\n\n  operation(): string {\n    return `Client calls ${this.dependency.operation()}`;\n  }\n}"
+            },
+            {
+              "name": "Observer pattern",
+              "description": "A design pattern in which an object, known as the subject, maintains a list of its dependents, called observers, and notifies them of any state changes.",
+              "codeSnippet": "// Subject\ninterface Subject {\n  attach(observer: Observer): void;\n  detach(observer: Observer): void;\n  notify(): void;\n}\n\nclass ConcreteSubject implements Subject {\n  private observers: Observer[] = [];\n\n  attach(observer: Observer): void {\n    this.observers.push(observer);\n  }\n\n  detach(observer: Observer): void {\n    const index = this.observers.indexOf(observer);\n    if (index !== -1) {\n      this.observers.splice(index, 1);\n    }\n  }\n\n  notify(): void {\n    for (const observer of this.observers) {\n      observer.update();\n    }\n  }\n}\n\n// Observer\ninterface Observer {\n  update(): void;\n}\n\nclass ConcreteObserver implements Observer {\n  update(): void {\n    console.log('Observer has been updated.');\n  }\n}\n\n// Usage\nconst subject = new ConcreteSubject();\nconst observer = new ConcreteObserver();\n\nsubject.attach(observer);\nsubject.notify();"
+            }
           ]
         }
       ]
@@ -99,22 +277,66 @@
         {
           "title": "Classes",
           "items": [
-            "Class syntax",
-            "Constructors",
-            "Properties",
-            "Methods",
-            "Access modifiers",
-            "Inheritance",
-            "Abstract classes"
+            {
+              "name": "Class syntax",
+              "description": "Defining a blueprint for creating objects, encapsulating data for the object's state and behavior.",
+              "codeSnippet": "class MyClass {\n  // Class members\n}"
+            },
+            {
+              "name": "Constructors",
+              "description": "Special methods called when an instance of the class is created, used for initializing object properties.",
+              "codeSnippet": "class MyClass {\n  constructor() {\n    // Initialization code\n  }\n}"
+            },
+            {
+              "name": "Properties",
+              "description": "Member variables that hold data associated with class instances, defining the state of objects.",
+              "codeSnippet": "class MyClass {\n  property: string;\n}"
+            },
+            {
+              "name": "Methods",
+              "description": "Functions defined within a class that perform operations on the object's data, defining its behavior.",
+              "codeSnippet": "class MyClass {\n  method(): void {\n    // Method body\n  }\n}"
+            },
+            {
+              "name": "Access modifiers",
+              "description": "Keywords used to control the accessibility of class members, such as 'public', 'private', and 'protected'.",
+              "codeSnippet": "class MyClass {\n  private privateProperty: string;\n  public publicProperty: number;\n  protected protectedProperty: boolean;\n}"
+            },
+            {
+              "name": "Inheritance",
+              "description": "Mechanism for creating a new class based on an existing class, inheriting its properties and methods.",
+              "codeSnippet": "class ParentClass {\n  // Parent class definition\n}\n\nclass ChildClass extends ParentClass {\n  // Child class definition\n}"
+            },
+            {
+              "name": "Abstract classes",
+              "description": "Classes that cannot be instantiated directly and are intended to serve as base classes for other classes.",
+              "codeSnippet": "abstract class AbstractClass {\n  abstract abstractMethod(): void;\n}"
+            }
           ]
         },
         {
           "title": "Modules",
           "items": [
-            "Exporting modules",
-            "importing modules",
-            "Default exports",
-            "Namespace imports"
+            {
+              "name": "Exporting modules",
+              "description": "Specifying which parts of a module should be accessible outside the module, using 'export' keyword.",
+              "codeSnippet": "// Exporting module members\nexport const myVar: string = 'Hello';\n\nexport function myFunction(): void {\n  // Function body\n}"
+            },
+            {
+              "name": "Importing modules",
+              "description": "Bringing functionality from other modules into the current module, using 'import' keyword.",
+              "codeSnippet": "// Importing module members\nimport { myVar, myFunction } from './myModule';\n\nconsole.log(myVar);\nmyFunction();"
+            },
+            {
+              "name": "Default exports",
+              "description": "Exporting a single value or function as the default export of a module, allowing it to be imported without braces.",
+              "codeSnippet": "// Default export\nconst myVar: string = 'Hello';\n\nexport default myVar;"
+            },
+            {
+              "name": "Namespace imports",
+              "description": "Importing an entire module or specific parts of it under a namespace, using 'import * as alias' syntax.",
+              "codeSnippet": "// Namespace import\nimport * as myModule from './myModule';\n\nconsole.log(myModule.myVar);\nmyModule.myFunction();"
+            }
           ]
         }
       ]

@@ -31,9 +31,9 @@
               <li
                 *ngFor="let item of card.items"
                 class="list-item"
-                (click)="onClick(item)"
+                (click)="onClick(item.name)"
               >
-                <a class="list-item-text">{{ item }}</a>
+                <a class="list-item-text">{{ item.name }}</a>
               </li>
             </ul>
           </div>
@@ -45,7 +45,8 @@
   </div>
 </section>
 
-<app-extra-overlay [choosenItem]="itemName"></app-extra-overlay>
-<!-- 
-[codeSnippet]="data[0].columnItem[0].test[0]?.codeSnippet"
-[description]="data[0].columnItem[0].test[0]?.description" -->
+<app-extra-overlay
+  [choosenItem]="itemName"
+  [codeSnippet]="codeSnippet"
+  [description]="description"
+></app-extra-overlay>
