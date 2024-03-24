@@ -1,27 +1,35 @@
-# WebCheatSheet
+# Web Development Cheat Sheet
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
+This project is a web application created in Angular and hosted on Firebase. It serves as a cheat sheet for web development basics, catering to both new developers and experienced ones alike. The cheat sheet covers fundamental concepts in HTML, CSS, TypeScript, and more, making it a handy reference tool for anyone working in web development.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Detailed cheat sheet covering HTML, CSS, TypeScript, and more.
+- Organized categories for easy navigation and reference.
+- Code snippets provided for each concept for quick implementation.
+- Built with Angular and styled with Bootstrap for a modern and responsive design.
+- Hosted on Firebase for easy access from anywhere.
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Visit the [Web Development Cheat Sheet](https://webdevcheatsheet.web.app/html) website.
+2. Browse through the different categories to find the concept you're interested in.
+3. Click on a concept to view its description and code snippet.
+4. Use the provided code snippets as a reference or copy them directly into your projects.
 
-## Build
+## Contributing
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+If you find any errors or have suggestions for improvement, feel free to contribute! Your contributions are greatly appreciated.
 
-## Running unit tests
+## License
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This project is licensed under the [MIT License](LICENSE), so feel free to use and modify it according to your needs.
 
-## Running end-to-end tests
+## Acknowledgements
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- This project was created using Angular and Bootstrap.
+- Special thanks to [Firebase](https://firebase.google.com/) for hosting the application.
 
-## Further help
+## Contact
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+For any questions or feedback, you can reach out to [biriczbence@gmail.com].
