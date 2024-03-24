@@ -1,15 +1,15 @@
 <div
   *ngIf="myBoolean$ | async"
-  class="bg-dark pt-3 bg-gradient text-light fixed-bottom"
+  class="bg-dark pt-1 bg-gradient text-light fixed-bottom"
 >
   <div
-    class="d-flex flex-column justify-content-center align-items-center gap-3"
+    class="d-flex flex-column justify-content-center align-items-center gap-1"
   >
     <div class="d-flex w-100 align-items-center justify-content-between px-4">
-      <div class="p-4"></div>
-      <h4>{{ choosenItem }}</h4>
+      <div class="px-4"></div>
+      <h5>{{ choosenItem }}</h5>
       <button class="btn text-light" (click)="toggleBoolean()">
-        <i class="bi bi-x-circle h2"></i>
+        <i class="bi bi-x-circle h3"></i>
       </button>
     </div>
 

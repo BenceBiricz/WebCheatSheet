@@ -1,3 +1,7 @@
 img {
   width: 3rem;
 }
+
+.text {
+  font-size: clamp(1rem, 1vw, 2rem);
+}
