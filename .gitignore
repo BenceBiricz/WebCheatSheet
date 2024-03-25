@@ -45,3 +45,6 @@ Thumbs.db
 /.firebase
 .firebaserc
 firebase.json
+
+# Firebase config
+/firebase-config
