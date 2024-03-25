@@ -47,4 +47,4 @@ Thumbs.db
 firebase.json
 
 # Firebase config
-/assests/firebase-config
+src/assets/firebase-config
