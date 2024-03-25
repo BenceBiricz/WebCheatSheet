@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { firebaseConfig } from './../assets/firebase-config/firebase-config';
+import { NgModule, importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,14 @@ import { ExtraOverlayComponent } from './shared/extra-overlay/extra-overlay.comp
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { overlayReducer } from './store/reducers/overlay-open-reducer';
+
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { AngularFireModule } from '@angular/fire/compat';
+import { getAnalytics } from 'firebase/analytics';
+import {
+  ScreenTrackingService,
+  UserTrackingService,
+} from '@angular/fire/analytics';
 
 @NgModule({
   declarations: [
@@ -37,8 +46,18 @@ import { overlayReducer } from './store/reducers/overlay-open-reducer';
     FormsModule,
     ReactiveFormsModule,
     StoreModule.forRoot({ myBoolean: overlayReducer }),
+    AngularFireModule.initializeApp(firebaseConfig),
   ],
-  providers: [],
+  providers: [
+    ScreenTrackingService,
+    UserTrackingService,
+    {
+      provide: firebaseConfig,
+      useValue: {
+        DEBUG_MODE: true,
+      },
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
