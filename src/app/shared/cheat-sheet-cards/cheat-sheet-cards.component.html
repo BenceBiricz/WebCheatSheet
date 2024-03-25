@@ -6,16 +6,14 @@
     </div>
 
     <div class="row d-flex align-items-center search-wrapper mb-4">
-      <a class="search-input" (click)="searchText(search.value)">
-        <i class="bi bi-search"></i
-      ></a>
-
+      <i class="bi bi-search search-input"></i>
       <input
         #search
         type="text"
         class="form-control"
         id="search"
         aria-describedby="Searchtext"
+        (input)="searchText(search.value)"
       />
     </div>
 

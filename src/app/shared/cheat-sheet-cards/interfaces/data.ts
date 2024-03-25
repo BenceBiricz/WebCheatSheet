@@ -1,12 +1,22 @@
-export interface Data {
-  columns: Column[];
+export interface Item {
+  name: string;
+  codeSnippet: string;
+  description: string;
+}
+
+export interface ColumnItem {
+  title: string;
+  items: Item[];
 }
 
 export interface Column {
   columnItem: ColumnItem[];
 }
 
-export interface ColumnItem {
-  title: string;
-  items: string[];
+export interface SortedColumnItem extends ColumnItem {
+  containsSearchTerm: boolean;
+}
+
+export interface SortedColumn extends Column {
+  containsSearchTerm: boolean;
 }

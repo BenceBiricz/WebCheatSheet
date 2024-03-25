@@ -1,6 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
-import { Column, Data, ColumnItem } from './interfaces/data';
+import {
+  Column,
+  Item,
+  ColumnItem,
+  SortedColumn,
+  SortedColumnItem,
+} from './interfaces/data';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../store/models/app-state';
 import { Observable } from 'rxjs';
@@ -57,30 +63,63 @@ export class CheatSheetCardsComponent implements OnInit {
 
   searchText(val: any) {
     console.log(val);
-    if (val) {
-      this.sortBySearchTerm(this.data, val);
-    }
+    this.sortBySearchTerm(this.data, val);
   }
 
-  // Function to sort the array based on a search term
-  sortBySearchTerm(columnArray: Column[], searchTerm: string): any {
-    const sortedColumns = columnArray.map((column: any) => {
-      const sortedColumnItem = column.columnItem.sort((a: any, b: any) => {
-        const searchTermIndexA = a.title
-          .toLowerCase()
-          .indexOf(searchTerm.toLowerCase());
-        const searchTermIndexB = b.title
-          .toLowerCase()
-          .indexOf(searchTerm.toLowerCase());
+  sortBySearchTerm(columns: Column[], searchTerm: string): Column[] {
+    // Sorting items based on search term
+    columns.forEach((column: Column) => {
+      column.columnItem.forEach((columnItem: ColumnItem) => {
+        columnItem.items.sort((a: Item, b: Item) => {
+          const searchTermIndexA = a.name
+            .toLowerCase()
+            .indexOf(searchTerm.toLowerCase());
+          const searchTermIndexB = b.name
+            .toLowerCase()
+            .indexOf(searchTerm.toLowerCase());
 
-        if (searchTermIndexA !== -1 && searchTermIndexB === -1) return -1; // a comes before b if a matches and b doesn't
-        if (searchTermIndexA === -1 && searchTermIndexB !== -1) return 1; // b comes before a if b matches and a doesn't
+          if (searchTermIndexA !== -1 && searchTermIndexB === -1) return -1; // a comes before b if a matches and b doesn't
+          if (searchTermIndexA === -1 && searchTermIndexB !== -1) return 1; // b comes before a if b matches and a doesn't
+          return 0;
+        });
+      });
+    });
+
+    // Sorting columnItem based on whether any item contains the search term
+    columns.forEach((column: Column) => {
+      column.columnItem.sort((a: ColumnItem, b: ColumnItem) => {
+        const aContainsTerm = a.items.some((item: Item) =>
+          item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        const bContainsTerm = b.items.some((item: Item) =>
+          item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        if (aContainsTerm && !bContainsTerm) return -1; // a comes before b if a contains the term and b doesn't
+        if (!aContainsTerm && bContainsTerm) return 1; // b comes before a if b contains the term and a doesn't
         return 0;
       });
-
-      return { columnItem: sortedColumnItem };
     });
-    //console.log(sortedColumns);
-    return { columns: sortedColumns };
+
+    // Sorting columns based on whether any columnItem contains the search term
+    columns.sort((a: Column, b: Column) => {
+      const aContainsTerm = a.columnItem.some((columnItem: ColumnItem) => {
+        return columnItem.items.some((item: Item) =>
+          item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      });
+
+      const bContainsTerm = b.columnItem.some((columnItem: ColumnItem) => {
+        return columnItem.items.some((item: Item) =>
+          item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      });
+
+      if (aContainsTerm && !bContainsTerm) return -1; // a comes before b if a contains the term and b doesn't
+      if (!aContainsTerm && bContainsTerm) return 1; // b comes before a if b contains the term and a doesn't
+      return 0;
+    });
+
+    return columns;
   }
 }
