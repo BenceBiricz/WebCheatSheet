@@ -1,4 +1,3 @@
-import { firebaseConfig } from './../assets/firebase-config/firebase-config';
 import { NgModule, importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -18,13 +17,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { overlayReducer } from './store/reducers/overlay-open-reducer';
 
-import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-import { AngularFireModule } from '@angular/fire/compat';
-import { getAnalytics } from 'firebase/analytics';
+import { firebaseConfig } from './../assets/firebase-config/firebase-config';
 import {
   ScreenTrackingService,
   UserTrackingService,
 } from '@angular/fire/analytics';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -47,17 +46,9 @@ import {
     ReactiveFormsModule,
     StoreModule.forRoot({ myBoolean: overlayReducer }),
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAnalyticsModule,
   ],
-  providers: [
-    ScreenTrackingService,
-    UserTrackingService,
-    {
-      provide: firebaseConfig,
-      useValue: {
-        DEBUG_MODE: true,
-      },
-    },
-  ],
+  providers: [ScreenTrackingService, UserTrackingService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
