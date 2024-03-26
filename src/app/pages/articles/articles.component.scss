@@ -1,0 +1,13 @@
+p,
+li {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+p {
+  text-indent: 3rem;
+}
+
+h2 {
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}

@@ -4,6 +4,8 @@ import { HtmlPageComponent } from './pages/html-page/html-page.component';
 import { CssPageComponent } from './pages/css-page/css-page.component';
 import { TypescriptPageComponent } from './pages/typescript-page/typescript-page.component';
 import { CSharpPageComponent } from './pages/c-sharp-page/c-sharp-page.component';
+import { BlogsComponent } from './pages/blogs/blogs.component';
+import { ArticlesComponent } from './pages/articles/articles.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,14 @@ const routes: Routes = [
   {
     path: 'csharp',
     component: CSharpPageComponent,
+  },
+  {
+    path: 'blogs',
+    component: BlogsComponent,
+  },
+  {
+    path: 'articles',
+    component: ArticlesComponent,
   },
   {
     path: '**',

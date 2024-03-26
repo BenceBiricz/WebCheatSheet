@@ -5,3 +5,12 @@ img {
 .text {
   font-size: clamp(1rem, 1vw, 2rem);
 }
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover {
+  cursor: pointer;
+}

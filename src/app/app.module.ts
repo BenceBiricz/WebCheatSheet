@@ -17,6 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { overlayReducer } from './store/reducers/overlay-open-reducer';
 import { CSharpPageComponent } from './pages/c-sharp-page/c-sharp-page.component';
+import { BlogsComponent } from './pages/blogs/blogs.component';
+import { ArticlesComponent } from './pages/articles/articles.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { CSharpPageComponent } from './pages/c-sharp-page/c-sharp-page.component
     CheatSheetCardsComponent,
     ExtraOverlayComponent,
     CSharpPageComponent,
+    BlogsComponent,
+    ArticlesComponent,
   ],
   imports: [
     BrowserModule,
