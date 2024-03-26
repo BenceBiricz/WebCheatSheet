@@ -16,6 +16,7 @@ import { ExtraOverlayComponent } from './shared/extra-overlay/extra-overlay.comp
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { overlayReducer } from './store/reducers/overlay-open-reducer';
+import { CSharpPageComponent } from './pages/c-sharp-page/c-sharp-page.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { overlayReducer } from './store/reducers/overlay-open-reducer';
     TypescriptPageComponent,
     CheatSheetCardsComponent,
     ExtraOverlayComponent,
+    CSharpPageComponent,
   ],
   imports: [
     BrowserModule,

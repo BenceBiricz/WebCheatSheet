@@ -71,6 +71,31 @@
               "description": "The <label> element represents a label for an <input> element. The 'for' attribute specifies which form element the label is bound to."
             }
           ]
+        },
+        {
+          "title": "Forms and Input Controls",
+          "items": [
+            {
+              "name": "<fieldset>",
+              "codeSnippet": "<fieldset>\n\t<legend>Personal Information</legend>\n\t<label for='name'>Name:</label>\n\t<input type='text' id='name' name='name'>\n\t<label for='email'>Email:</label>\n\t<input type='email' id='email' name='email'>\n</fieldset>",
+              "description": "The <fieldset> element groups related form elements together, providing structure and organization to the form. It is often used with the <legend> element, which provides a caption or title for the fieldset."
+            },
+            {
+              "name": "<datalist>",
+              "codeSnippet": "<input list='browsers'><datalist id='browsers'><option value='Chrome'><option value='Firefox'><option value='Edge'><option value='Safari'><option value='Opera'></datalist>",
+              "description": "The <datalist> element provides a list of predefined options for an <input> element with the 'list' attribute. It allows users to select from a predefined set of values or suggestions."
+            },
+            {
+              "name": "<optgroup>",
+              "codeSnippet": "<select><optgroup label='Group 1'><option>Option 1.1</option><option>Option 1.2</option></optgroup><optgroup label='Group 2'><option>Option 2.1</option><option>Option 2.2</option></optgroup></select>",
+              "description": "The <optgroup> element groups related <option> elements within a <select> element. It provides a way to categorize and organize the options presented to the user."
+            },
+            {
+              "name": "<progress>",
+              "codeSnippet": "<progress value='50' max='100'></progress>",
+              "description": "The <progress> element represents the completion progress of a task. It can be used to visualize the progress of file downloads, form submissions, or any task that has a known completion percentage."
+            }
+          ]
         }
       ]
     },
@@ -150,6 +175,31 @@
               "description": "The <source> element specifies multiple media resources for <audio> and <video> elements. Browsers will choose the first source they support."
             }
           ]
+        },
+        {
+          "title": "Multimedia and Interactive Features",
+          "items": [
+            {
+              "name": "<svg>",
+              "codeSnippet": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' stroke='black' stroke-width='3' fill='red' /></svg>",
+              "description": "The <svg> element is used to draw vector graphics on a web page. It can be used to create shapes, paths, and other graphical elements, allowing for scalable and interactive graphics."
+            },
+            {
+              "name": "<audio>",
+              "codeSnippet": "<audio controls><source src='audio.mp3' type='audio/mpeg'></audio>",
+              "description": "The <audio> element embeds audio content in an HTML document. The 'controls' attribute adds audio controls, such as play, pause, and volume, allowing users to interact with the audio playback."
+            },
+            {
+              "name": "<video>",
+              "codeSnippet": "<video controls><source src='video.mp4' type='video/mp4'></video>",
+              "description": "The <video> element embeds video content in an HTML document. The 'controls' attribute adds video controls, such as play, pause, and volume, allowing users to interact with the video playback."
+            },
+            {
+              "name": "<map>",
+              "codeSnippet": "<img src='plan.jpg' usemap='#map'><map name='map'><area shape='rect' coords='0,0,82,126' href='sun.htm' alt='Sun'></map>",
+              "description": "The <map> element is used in conjunction with <area> elements to define image maps. Image maps allow certain areas of an image to be clickable, linking to different destinations."
+            }
+          ]
         }
       ]
     },
@@ -209,6 +259,31 @@
               "description": "The <footer> element represents a footer for its nearest sectioning content or sectioning root. It typically contains information about the author, copyright, contact information, etc."
             }
           ]
+        },
+        {
+          "title": "Advanced HTML Elements",
+          "items": [
+            {
+              "name": "<canvas>",
+              "codeSnippet": "<canvas id='myCanvas' width='200' height='100'></canvas>",
+              "description": "The <canvas> element provides a drawable region in HTML, controlled through scripting. It can be used for rendering graphics, animations, or other visual effects dynamically on the fly."
+            },
+            {
+              "name": "<details>",
+              "codeSnippet": "<details>\n\t<summary>Click to expand</summary>\n\t<p>Hidden content here.</p>\n</details>",
+              "description": "The <details> element represents a disclosure widget from which the user can obtain additional information or controls. The optional <summary> element provides a summary or label for the details content."
+            },
+            {
+              "name": "<meter>",
+              "codeSnippet": "<meter value='7' min='0' max='10'>7 out of 10</meter>",
+              "description": "The <meter> element represents a scalar measurement within a known range, or a fractional value, typically displayed as a gauge or progress bar."
+            },
+            {
+              "name": "<progress>",
+              "codeSnippet": "<progress value='50' max='100'></progress>",
+              "description": "The <progress> element represents the completion progress of a task. It can be used to visualize the progress of file downloads, form submissions, or any task that has a known completion percentage."
+            }
+          ]
         }
       ]
     },
@@ -256,6 +331,36 @@
               "name": "<style>",
               "codeSnippet": "<style>\n\t/* CSS styles */\n\tbody { font-family: Arial, sans-serif; }\n</style>",
               "description": "The <style> element contains CSS rules for styling the HTML document. It can be placed in the <head> section or directly within the HTML document."
+            }
+          ]
+        },
+        {
+          "title": "Embedding External Content",
+          "items": [
+            {
+              "name": "<iframe>",
+              "codeSnippet": "<iframe src='https://www.youtube.com/embed/dQw4w9WgXcQ' width='560' height='315' frameborder='0' allowfullscreen></iframe>",
+              "description": "The <iframe> element allows you to embed external content, such as webpages or videos, within your HTML document. The 'src' attribute specifies the URL of the content to be embedded. Additional attributes like 'width', 'height', 'frameborder', and 'allowfullscreen' can be used to customize the appearance and behavior of the embedded content."
+            },
+            {
+              "name": "<embed>",
+              "codeSnippet": "<embed src='audio.mp3' type='audio/mpeg' width='300' height='200'>",
+              "description": "The <embed> element allows you to embed external multimedia content, such as audio or video files, directly into your HTML document. The 'src' attribute specifies the URL of the content to be embedded, while the 'type' attribute indicates the MIME type of the content. Additional attributes like 'width' and 'height' can be used to specify the dimensions of the embedded content."
+            }
+          ]
+        },
+        {
+          "title": "Scripting and Interactivity",
+          "items": [
+            {
+              "name": "<script>",
+              "codeSnippet": "<script>\n\t// JavaScript code goes here\n\talert('Hello, World!');\n</script>",
+              "description": "The <script> element is used to embed or reference executable code, typically JavaScript, within an HTML document. It can be placed in the <head> section or directly within the HTML document. JavaScript code enclosed within <script> tags is executed by the browser."
+            },
+            {
+              "name": "<noscript>",
+              "codeSnippet": "<noscript>\n\t<p>This page requires JavaScript to function properly.</p>\n</noscript>",
+              "description": "The <noscript> element provides fallback content for users who have disabled JavaScript in their browsers or for browsers that do not support JavaScript. The content within <noscript> tags is displayed only if JavaScript is not available or enabled."
             }
           ]
         }

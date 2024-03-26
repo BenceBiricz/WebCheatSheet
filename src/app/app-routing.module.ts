@@ -3,6 +3,7 @@ import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { HtmlPageComponent } from './pages/html-page/html-page.component';
 import { CssPageComponent } from './pages/css-page/css-page.component';
 import { TypescriptPageComponent } from './pages/typescript-page/typescript-page.component';
+import { CSharpPageComponent } from './pages/c-sharp-page/c-sharp-page.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'typescript',
     component: TypescriptPageComponent,
+  },
+  {
+    path: 'csharp',
+    component: CSharpPageComponent,
   },
   {
     path: '**',

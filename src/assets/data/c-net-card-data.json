@@ -1,0 +1,466 @@
+{
+  "columns": [
+    {
+      "columnItem": [
+        {
+          "title": "Basic Types",
+          "items": [
+            {
+              "name": "int",
+              "description": "The int type represents signed 32-bit integers. It is commonly used for storing whole numbers within the range of approximately -2 billion to 2 billion.",
+              "codeSnippet": "int myInt = 42;"
+            },
+            {
+              "name": "double",
+              "description": "The double type represents double-precision floating-point numbers. It is commonly used for representing decimal numbers with a higher degree of precision compared to float.",
+              "codeSnippet": "double myDouble = 3.14;"
+            },
+            {
+              "name": "bool",
+              "description": "The bool type represents Boolean values, which can be either true or false. It is commonly used for logical operations and conditional statements.",
+              "codeSnippet": "bool myBool = true;"
+            },
+            {
+              "name": "char",
+              "description": "The char type represents a single Unicode character. It is commonly used for storing individual characters or small sets of characters.",
+              "codeSnippet": "char myChar = 'A';"
+            },
+            {
+              "name": "string",
+              "description": "The string type represents a sequence of characters. It is commonly used for storing textual data such as names, messages, and file paths.",
+              "codeSnippet": "string myString = \"Hello, World!\";"
+            }
+          ]
+        },
+        {
+          "title": "Object-Oriented Programming",
+          "items": [
+            {
+              "name": "Classes",
+              "description": "Classes are the fundamental building blocks of object-oriented programming in C#. They define the blueprint for creating objects, encapsulating data for the object's state and behavior through methods.",
+              "codeSnippet": "public class MyClass { }"
+            },
+            {
+              "name": "Inheritance",
+              "description": "Inheritance is a mechanism in C# by which one class can inherit properties and behavior from another class. It promotes code reusability and supports the 'is-a' relationship.",
+              "codeSnippet": "public class ChildClass : ParentClass { }"
+            },
+            {
+              "name": "Interfaces",
+              "description": "Interfaces define a contract for classes to implement. They consist of method signatures, properties, events, and indexers. Classes can implement one or more interfaces.",
+              "codeSnippet": "public interface IMyInterface { void MyMethod(); }"
+            }
+          ]
+        },
+        {
+          "title": "Advanced Concepts",
+          "items": [
+            {
+              "name": "Delegates",
+              "description": "Delegates are reference types that hold references to methods. They are similar to function pointers in C or C++. Delegates are used to implement callbacks and event handling.",
+              "codeSnippet": "public delegate int MathOperation(int x, int y);\nMathOperation add = (a, b) => a + b;"
+            },
+            {
+              "name": "Events",
+              "description": "Events allow objects to notify other objects when certain actions occur. They are used to implement the observer design pattern, where one object (the subject) maintains a list of dependents (observers) and notifies them of state changes.",
+              "codeSnippet": "public event EventHandler MyEvent;\nobj.MyEvent += EventHandlerMethod;"
+            }
+          ]
+        },
+        {
+          "title": "LINQ (Language Integrated Query)",
+          "items": [
+            {
+              "name": "LINQ Queries",
+              "description": "LINQ allows you to query collections in C# using a SQL-like syntax. LINQ queries are expressive and concise, enabling powerful data manipulation operations on objects, arrays, and other data sources.",
+              "codeSnippet": "var query = from item in collection\n            where item.Property == value\n            select item;"
+            },
+            {
+              "name": "LINQ Methods",
+              "description": "In addition to query syntax, LINQ provides a set of extension methods for querying collections. These methods are called on collection objects and allow for fluent, method-chaining style queries.",
+              "codeSnippet": "var result = collection.Where(item => item.Property == value).Select(item => item.Name);"
+            },
+            {
+              "name": "LINQ Operators",
+              "description": "LINQ offers a variety of standard query operators such as Where, Select, OrderBy, GroupBy, Join, and Aggregate. These operators provide powerful tools for filtering, sorting, grouping, joining, and aggregating data.",
+              "codeSnippet": "var result = collection.Where(item => item.Property == value).OrderBy(item => item.Name);"
+            }
+          ]
+        },
+        {
+          "title": "Additional Web Development Concepts",
+          "items": [
+            {
+              "name": "ASP.NET Core Middleware",
+              "description": "ASP.NET Core Middleware is a pipeline of components that handle requests and responses in an ASP.NET Core application. Middleware can be used for logging, authentication, authorization, routing, and more.",
+              "codeSnippet": "app.UseMiddleware<CustomMiddleware>();"
+            },
+            {
+              "name": "ASP.NET Core Identity",
+              "description": "ASP.NET Core Identity is a membership system that adds login functionality to web applications. It provides user registration, login, password recovery, and role-based authorization features.",
+              "codeSnippet": "services.AddIdentity<ApplicationUser, IdentityRole>()\n    .AddEntityFrameworkStores<ApplicationDbContext>()\n    .AddDefaultTokenProviders();"
+            },
+            {
+              "name": "JWT Authentication",
+              "description": "JSON Web Token (JWT) Authentication is a standard for securing web APIs. It allows clients to authenticate using a token, which is digitally signed by the server and contains claims about the user.",
+              "codeSnippet": "services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)\n    .AddJwtBearer(options => { });"
+            },
+            {
+              "name": "Swagger/OpenAPI",
+              "description": "Swagger/OpenAPI is a specification for describing RESTful APIs. It provides a way to document APIs, generate client SDKs, and test endpoints. Tools like Swashbuckle integrate Swagger with ASP.NET Core applications.",
+              "codeSnippet": "services.AddSwaggerGen(c => { c.SwaggerDoc(\"v1\", new OpenApiInfo { Title = \"My API\", Version = \"v1\" }); });"
+            },
+            {
+              "name": "Client-side Frameworks",
+              "description": "Client-side frameworks like React, Angular, and Vue.js are commonly used with ASP.NET Core for building interactive and dynamic user interfaces. These frameworks enable developers to create rich single-page applications (SPAs).",
+              "codeSnippet": "npm install react react-dom\nnpm install --save-dev @types/react @types/react-dom"
+            },
+            {
+              "name": "WebSockets",
+              "description": "WebSockets provide full-duplex communication channels over a single TCP connection. They enable real-time, bi-directional communication between clients and servers, making them ideal for applications requiring live updates and notifications.",
+              "codeSnippet": "var socket = new WebSocket('ws://localhost:5000');\nsocket.onopen = function(event) { };"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "columnItem": [
+        {
+          "title": "Advanced Types",
+          "items": [
+            {
+              "name": "struct",
+              "description": "A struct is a value type that can contain constructors, constants, fields, methods, properties, indexers, operators, events, and nested types. It is commonly used for representing lightweight objects.",
+              "codeSnippet": "public struct MyStruct { public int Value; }"
+            },
+            {
+              "name": "enum",
+              "description": "An enum (enumeration) is a distinct type with named constants. It is commonly used for defining sets of named integral constants.",
+              "codeSnippet": "public enum Day { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday }"
+            },
+            {
+              "name": "delegate",
+              "description": "A delegate is a type that represents references to methods with a particular parameter list and return type. It is commonly used for implementing callbacks and event handling.",
+              "codeSnippet": "public delegate void MyDelegate(int x, int y);"
+            },
+            {
+              "name": "interface",
+              "description": "An interface defines a contract for classes to implement. It contains only the signatures of methods, properties, events, or indexers. It is commonly used for defining contracts for classes that provide specific functionality.",
+              "codeSnippet": "public interface IMyInterface { void MyMethod(); }"
+            },
+            {
+              "name": "nullable types",
+              "description": "Nullable types are types that represent all the values of their underlying type plus an additional null value. They are commonly used for representing database fields that can be null or for expressing the absence of a value.",
+              "codeSnippet": "int? nullableInt = null;"
+            }
+          ]
+        },
+        {
+          "title": "Data Structures",
+          "items": [
+            {
+              "name": "Arrays",
+              "description": "Arrays are used to store multiple values of the same data type in a single variable. They offer fast indexed access to elements.",
+              "codeSnippet": "int[] numbers = new int[5];"
+            },
+            {
+              "name": "Lists",
+              "description": "Lists are dynamic arrays in C# that can grow or shrink in size dynamically. They provide more flexibility compared to arrays.",
+              "codeSnippet": "List<int> numbers = new List<int>();"
+            },
+            {
+              "name": "Dictionaries",
+              "description": "Dictionaries store key-value pairs. They provide fast lookup based on keys and are useful for associative arrays and mapping unique keys to values.",
+              "codeSnippet": "Dictionary<string, int> ages = new Dictionary<string, int>();"
+            }
+          ]
+        },
+        {
+          "title": "Looping Constructs: for, foreach, while, do-while",
+          "items": [
+            {
+              "name": "for Loop",
+              "description": "The for loop executes a block of code repeatedly until a specified condition evaluates to false. It consists of initialization, condition, and iteration sections.",
+              "codeSnippet": "for (int i = 0; i < 5; i++)\n{\n    Console.WriteLine(i);\n}"
+            },
+            {
+              "name": "foreach Loop",
+              "description": "The foreach loop is used to iterate over elements of an array or collection. It automatically iterates through each element without needing an explicit loop counter.",
+              "codeSnippet": "int[] numbers = { 1, 2, 3, 4, 5 };\nforeach (int number in numbers)\n{\n    Console.WriteLine(number);\n}"
+            },
+            {
+              "name": "while Loop",
+              "description": "The while loop executes a block of code repeatedly as long as a specified condition evaluates to true. It is useful when the number of iterations is not known before the loop starts.",
+              "codeSnippet": "int i = 0;\nwhile (i < 5)\n{\n    Console.WriteLine(i);\n    i++;\n}"
+            },
+            {
+              "name": "do-while Loop",
+              "description": "The do-while loop is similar to the while loop, but it executes the block of code at least once before checking the condition. It ensures that the block of code is executed at least once, regardless of the condition.",
+              "codeSnippet": "int i = 0;\ndo\n{\n    Console.WriteLine(i);\n    i++;\n} while (i < 5);"
+            }
+          ]
+        },
+        {
+          "title": "Database and Entity Framework",
+          "items": [
+            {
+              "name": "Entity Framework Core Migrations",
+              "description": "Entity Framework Core Migrations enable developers to evolve the database schema over time by applying incremental changes to the database. Migrations are used to create, update, and revert database schema changes.",
+              "codeSnippet": "dotnet ef migrations add InitialCreate\n dotnet ef database update"
+            },
+            {
+              "name": "Database Seeding",
+              "description": "Database Seeding is the process of populating a database with initial data during application startup. It ensures that the database has predefined data required for the application to function properly.",
+              "codeSnippet": "public static void SeedData(this ModelBuilder modelBuilder) { }"
+            },
+            {
+              "name": "LINQ Queries",
+              "description": "Language Integrated Query (LINQ) allows developers to write queries directly in C# code. LINQ queries are used with Entity Framework to retrieve data from a database using strongly-typed query expressions.",
+              "codeSnippet": "var query = from c in context.Customers where c.City == \"London\" select c;"
+            },
+            {
+              "name": "Entity Framework Core Relationships",
+              "description": "Entity Framework Core Relationships define how entities are related to each other in a database schema. Relationships include one-to-one, one-to-many, and many-to-many associations between entities.",
+              "codeSnippet": "public class Order { public int OrderId { get; set; } public int CustomerId { get; set; } public Customer Customer { get; set; } }"
+            },
+            {
+              "name": "Database Transactions",
+              "description": "Database Transactions provide a way to ensure the consistency and integrity of data in a database. Transactions allow developers to group multiple database operations into a single unit of work, ensuring that all operations succeed or fail together.",
+              "codeSnippet": "using (var transaction = context.Database.BeginTransaction()) { }"
+            },
+            {
+              "name": "Database Providers",
+              "description": "Entity Framework Core supports multiple database providers, allowing developers to work with different database systems such as SQL Server, MySQL, PostgreSQL, SQLite, and others. Each provider implements the necessary functionality to interact with its respective database.",
+              "codeSnippet": "services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "columnItem": [
+        {
+          "title": "Functions, Methods, and Classes",
+          "items": [
+            {
+              "name": "Functions",
+              "description": "In C#, functions are blocks of code that perform a specific task. They can take parameters, perform operations, and return a value. Functions in C# are often referred to as methods when they are defined within classes.",
+              "codeSnippet": "public int Add(int x, int y) { return x + y; }"
+            },
+            {
+              "name": "Methods",
+              "description": "Methods are functions that are associated with a class or struct. They define the behavior of objects and can access the data stored in those objects. Methods can be static or instance methods.",
+              "codeSnippet": "public void PrintMessage(string message) { Console.WriteLine(message); }"
+            },
+            {
+              "name": "Classes",
+              "description": "A class is a blueprint for creating objects. It defines the data and behavior of objects of that type. Classes in C# encapsulate data for the object's state and behavior through methods. They support concepts such as inheritance, polymorphism, and encapsulation.",
+              "codeSnippet": "public class MyClass { public void MyMethod() { } }"
+            },
+            {
+              "name": "Constructors",
+              "description": "Constructors are special methods used for initializing objects of a class. They have the same name as the class and are invoked when an object of that class is created. Constructors can initialize the object's state and perform any necessary setup.",
+              "codeSnippet": "public MyClass() { }"
+            },
+            {
+              "name": "Properties",
+              "description": "Properties are members of a class that encapsulate fields and provide access to them. They allow controlled access to the fields, enabling validation, and maintaining the object's integrity.",
+              "codeSnippet": "public string Name { get; set; }"
+            }
+          ]
+        },
+        {
+          "title": "Conditional Statements: if, else, switch",
+          "items": [
+            {
+              "name": "if Statement",
+              "description": "The if statement is used to execute a block of code if a specified condition is true. It can be followed by an optional else statement, which executes a block of code if the condition is false.",
+              "codeSnippet": "int x = 10;\nif (x > 5)\n{\n    Console.WriteLine(\"x is greater than 5\");\n}"
+            },
+            {
+              "name": "else Statement",
+              "description": "The else statement is used in conjunction with the if statement to execute a block of code when the if condition is false.",
+              "codeSnippet": "int x = 3;\nif (x > 5)\n{\n    Console.WriteLine(\"x is greater than 5\");\n}\nelse\n{\n    Console.WriteLine(\"x is less than or equal to 5\");\n}"
+            },
+            {
+              "name": "else if Statement",
+              "description": "The else if statement is used to specify a new condition to test if the previous if condition is false.",
+              "codeSnippet": "int x = 3;\nif (x > 5)\n{\n    Console.WriteLine(\"x is greater than 5\");\n}\nelse if (x == 5)\n{\n    Console.WriteLine(\"x is equal to 5\");\n}\nelse\n{\n    Console.WriteLine(\"x is less than 5\");\n}"
+            },
+            {
+              "name": "switch Statement",
+              "description": "The switch statement is used to select one of many code blocks to be executed. It evaluates an expression, then executes statements associated with the matching case label.",
+              "codeSnippet": "int day = 3;\nswitch (day)\n{\n    case 1:\n        Console.WriteLine(\"Monday\");\n        break;\n    case 2:\n        Console.WriteLine(\"Tuesday\");\n        break;\n    default:\n        Console.WriteLine(\"Other day\");\n        break;\n}"
+            }
+          ]
+        },
+        {
+          "title": "Exception Handling",
+          "items": [
+            {
+              "name": "try-catch",
+              "description": "The try-catch block is used for exception handling in C#. Code that may raise an exception is placed within the try block, and the catch block catches and handles any exceptions that occur.",
+              "codeSnippet": "try\n{\n    // Code that may raise an exception\n}\ncatch (Exception ex)\n{\n    // Handle the exception\n}"
+            },
+            {
+              "name": "finally",
+              "description": "The finally block is used in association with the try-catch block to execute code regardless of whether an exception occurs or not. It's typically used to release resources.",
+              "codeSnippet": "try\n{\n    // Code that may raise an exception\n}\ncatch (Exception ex)\n{\n    // Handle the exception\n}\nfinally\n{\n    // Cleanup code\n}"
+            },
+            {
+              "name": "throw",
+              "description": "The throw statement is used to manually throw an exception. It allows custom exceptions to be raised based on specific conditions.",
+              "codeSnippet": "if (condition)\n{\n    throw new CustomException(\"Error message\");\n}"
+            },
+            {
+              "name": "Custom Exceptions",
+              "description": "C# allows programmers to define custom exception types by creating classes that inherit from the Exception base class or one of its derived classes. Custom exceptions can provide additional context or functionality specific to an application.",
+              "codeSnippet": "public class CustomException : Exception\n{\n    public CustomException(string message) : base(message)\n    {\n    }\n}"
+            }
+          ]
+        },
+        {
+          "title": "Additional C# Topics",
+          "items": [
+            {
+              "name": "Async/Await",
+              "description": "Async/Await is a feature introduced in C# to simplify asynchronous programming. It allows developers to write asynchronous code that looks and behaves synchronously, improving code readability and performance.",
+              "codeSnippet": "public async Task<int> GetDataAsync() { }"
+            },
+
+            {
+              "name": "Reflection",
+              "description": "Reflection in C# allows developers to inspect and manipulate types, members, and metadata of assemblies at runtime. It enables dynamic code execution, type discovery, and building generic algorithms.",
+              "codeSnippet": "Type type = typeof(MyClass); // Get type information\nMethodInfo methodInfo = type.GetMethod('MyMethod'); // Get method information"
+            },
+            {
+              "name": "Attributes",
+              "description": "Attributes in C# provide a way to add metadata to types and their members. They enable declarative programming by allowing developers to attach additional information to code elements, which can be queried at runtime using reflection.",
+              "codeSnippet": "[Serializable]\npublic class MyClass { }"
+            },
+            {
+              "name": "Nullable Types",
+              "description": "Nullable Types in C# allow variables to hold either a value type or a null reference. They are particularly useful when dealing with database queries, where fields may contain null values.",
+              "codeSnippet": "int? nullableInt = null;"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "columnItem": [
+        {
+          "title": "File I/O",
+          "items": [
+            {
+              "name": "Reading from Files",
+              "description": "Reading data from files is a common task in C# applications. It involves opening a file, reading its contents, and then closing the file.",
+              "codeSnippet": "string text = File.ReadAllText(\"path/to/file.txt\");"
+            },
+            {
+              "name": "Writing to Files",
+              "description": "Writing data to files allows applications to store information persistently. It involves opening a file, writing data to it, and then closing the file.",
+              "codeSnippet": "string text = \"Hello, World!\";\nFile.WriteAllText(\"path/to/file.txt\", text);"
+            },
+            {
+              "name": "Working with Streams",
+              "description": "Streams provide a convenient way to work with data in C#. They can be used for reading from or writing to various sources, including files, network connections, and memory.",
+              "codeSnippet": "using (FileStream fs = new FileStream(\"path/to/file.txt\", FileMode.Open))\n{\n    // Perform operations with the file stream\n}"
+            }
+          ]
+        },
+        {
+          "title": "Multithreading",
+          "items": [
+            {
+              "name": "Creating Threads",
+              "description": "Multithreading allows applications to execute multiple threads concurrently, improving performance and responsiveness. Threads can be created using the Thread class.",
+              "codeSnippet": "Thread thread = new Thread(MyMethod);\nthread.Start();"
+            },
+            {
+              "name": "Synchronization",
+              "description": "Synchronization mechanisms ensure that only one thread can access a shared resource at a time, preventing data corruption and race conditions. C# provides various synchronization constructs such as locks, mutexes, and semaphores.",
+              "codeSnippet": "lock (lockObject)\n{\n    // Critical section\n}"
+            }
+          ]
+        },
+        {
+          "title": "Web Development Frameworks and Tools",
+          "items": [
+            {
+              "name": "ASP.NET Core",
+              "description": "ASP.NET Core is a cross-platform, open-source web framework for building modern, cloud-based, and internet-connected applications. It provides a modular and lightweight architecture.",
+              "codeSnippet": "dotnet new webapi -n MyWebAPI"
+            },
+            {
+              "name": "ASP.NET MVC",
+              "description": "ASP.NET MVC is a framework for building web applications using the Model-View-Controller architectural pattern. It provides features such as routing, controllers, views, and model binding.",
+              "codeSnippet": "public class HomeController : Controller { }"
+            },
+            {
+              "name": "Razor Pages",
+              "description": "Razor Pages is a page-based web framework built on top of ASP.NET Core, allowing developers to build web pages with server-side code seamlessly integrated with HTML markup.",
+              "codeSnippet": "@page\n@model IndexModel\n<h1>Hello, @Model.Name!</h1>"
+            },
+            {
+              "name": "Entity Framework Core",
+              "description": "Entity Framework Core is an object-relational mapper (ORM) that enables .NET developers to work with relational databases using domain-specific objects. It provides automatic database schema generation, change tracking, and query capabilities.",
+              "codeSnippet": "public class ApplicationDbContext : DbContext { }"
+            },
+            {
+              "name": "ASP.NET Web API",
+              "description": "ASP.NET Web API is a framework for building RESTful HTTP services that can be consumed by a variety of clients, including web browsers, mobile devices, and desktop applications.",
+              "codeSnippet": "public class ValuesController : ControllerBase { }"
+            },
+            {
+              "name": "SignalR",
+              "description": "SignalR is a real-time web framework for adding real-time functionality to web applications. It provides features like server-to-client push notifications, WebSocket support, and handling connections between clients and servers.",
+              "codeSnippet": "public class ChatHub : Hub { }"
+            },
+            {
+              "name": "Blazor",
+              "description": "Blazor is a web framework for building interactive web UIs using C# and .NET instead of JavaScript. It allows developers to create single-page applications (SPAs) with reusable components.",
+              "codeSnippet": "@page \"/counter\"\n<h1>Counter</h1>\n<p>Current count: @currentCount</p>"
+            },
+            {
+              "name": "IdentityServer",
+              "description": "IdentityServer is a framework for implementing authentication, single sign-on (SSO), and identity management solutions for web applications and APIs. It supports various authentication protocols like OAuth 2.0 and OpenID Connect.",
+              "codeSnippet": "services.AddIdentityServer()\n    .AddDeveloperSigningCredential()\n    .AddInMemoryApiResources(Config.Apis)\n    .AddInMemoryClients(Config.Clients);"
+            }
+          ]
+        },
+        {
+          "title": "Advanced C# Topics",
+          "items": [
+            {
+              "name": "Serialization",
+              "description": "Serialization is the process of converting objects into a format that can be stored or transmitted, such as JSON, XML, or binary. C# provides built-in support for serialization through classes like JsonSerializer, XmlSerializer, and DataContractSerializer.",
+              "codeSnippet": "// JSON Serialization\nstring json = JsonSerializer.Serialize(myObject);"
+            },
+            {
+              "name": "Assemblies and DLLs",
+              "description": "Assemblies in C# are the building blocks of .NET applications. They contain compiled code, metadata, and resources that make up a .NET application or library. DLLs (Dynamic Link Libraries) are a type of assembly that can be dynamically linked to other assemblies at runtime.",
+              "codeSnippet": "// Creating a DLL\n// Code is compiled into a DLL file"
+            },
+            {
+              "name": "LINQ to Entities",
+              "description": "LINQ to Entities is a component of Entity Framework that enables querying relational data using LINQ syntax. It allows developers to write LINQ queries against a database context, which are translated into SQL queries and executed against the underlying database.",
+              "codeSnippet": "// LINQ to Entities Query\nvar query = dbContext.Products.Where(p => p.Category == 'Electronics');"
+            },
+            {
+              "name": "Dependency Injection",
+              "description": "Dependency Injection (DI) is a design pattern used to achieve loose coupling and improve the testability and maintainability of software applications. In C#, DI is commonly implemented using frameworks like ASP.NET Core's built-in DI container or third-party libraries like Autofac and Ninject.",
+              "codeSnippet": "// Constructor Injection\npublic class MyClass { public MyClass(IService dependency) { } }"
+            },
+            {
+              "name": "Unit Testing",
+              "description": "Unit Testing is a software testing technique where individual units or components of a software application are tested in isolation. In C#, popular unit testing frameworks include MSTest, NUnit, and xUnit.NET. Unit tests are typically written using attributes like [TestMethod] or [Fact] to identify test methods.",
+              "codeSnippet": "// MSTest Unit Test\n[TestMethod]\npublic void TestMethod() { /* Test logic */ }"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
