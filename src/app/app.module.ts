@@ -19,6 +19,7 @@ import { overlayReducer } from './store/reducers/overlay-open-reducer';
 import { CSharpPageComponent } from './pages/c-sharp-page/c-sharp-page.component';
 import { BlogsComponent } from './pages/blogs/blogs.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ArticlesComponent } from './pages/articles/articles.component';
     CSharpPageComponent,
     BlogsComponent,
     ArticlesComponent,
+    AboutPageComponent,
   ],
   imports: [
     BrowserModule,

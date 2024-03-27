@@ -6,6 +6,7 @@ import { TypescriptPageComponent } from './pages/typescript-page/typescript-page
 import { CSharpPageComponent } from './pages/c-sharp-page/c-sharp-page.component';
 import { BlogsComponent } from './pages/blogs/blogs.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'articles',
     component: ArticlesComponent,
+  },
+  {
+    path: 'about',
+    component: AboutPageComponent,
   },
   {
     path: '**',
