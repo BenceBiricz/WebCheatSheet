@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +20,14 @@ import { CSharpPageComponent } from './pages/c-sharp-page/c-sharp-page.component
 import { BlogsComponent } from './pages/blogs/blogs.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+
+import { firebaseConfig } from './../assets/firebase-config/firebase-config';
+import {
+  ScreenTrackingService,
+  UserTrackingService,
+} from '@angular/fire/analytics';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -45,8 +53,10 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
     FormsModule,
     ReactiveFormsModule,
     StoreModule.forRoot({ myBoolean: overlayReducer }),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAnalyticsModule,
   ],
-  providers: [],
+  providers: [ScreenTrackingService, UserTrackingService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
