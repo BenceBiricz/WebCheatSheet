@@ -3,12 +3,12 @@
 }
 
 .btn-hero {
-  font-size: 2rem;
+  font-size: 1rem;
   transition: transform 0.6s;
 }
 
 .btn-hero:hover {
-  transform: rotate(90deg);
+  transform: translateX(10px);
 }
 
 .text-extra {
