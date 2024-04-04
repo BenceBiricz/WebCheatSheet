@@ -15,10 +15,8 @@ export class ArticlesComponent implements OnInit {
   constructor(private http: HttpClient, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    //this.dataPath
     this.route.queryParams.subscribe((params) => {
       this.dataPath = params['article'];
-      console.log(params['article']);
     });
 
     this.http
