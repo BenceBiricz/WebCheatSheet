@@ -1,93 +1,43 @@
-<div class="container p-5">
+<div *ngIf="loaded" class="container pb-5">
+  <button class="btn bnt-primary" (click)="back()">
+    <i class="bi bi-arrow-left-circle-fill h1"></i>
+  </button>
+
   <h1 class="text-center mb-5">
-    The Power of Cheat Sheets: A Shortcut to Learning
+    {{ data.title }}
   </h1>
 
   <p>
-    Are you looking for a quick and effective way to learn new things? Look no
-    further than cheat sheets. While the term "cheat" might carry a negative
-    connotation, cheat sheets are actually valuable tools for accelerating your
-    learning process.
+    {{ data.description }}
   </p>
 
-  <h2>What Are Cheat Sheets?</h2>
+  <h2>{{ data.subtitle }}</h2>
 
   <p>
-    Cheat sheets are concise summaries of key information on a particular topic.
-    They condense complex concepts, formulas, or procedures into a single,
-    easily digestible document. Whether you're a student cramming for an exam or
-    a professional seeking to deepen your expertise, cheat sheets provide a
-    convenient reference for essential information.
+    {{ data.paragraph }}
   </p>
 
-  <h2>Why Use Cheat Sheets?</h2>
+  <div class="d-flex justify-content-center w-100 mt-5 mb-5">
+    <img
+      class="img-fluid w-75 shadow"
+      [src]="'assets/pictures/' + data.picture"
+      alt=""
+    />
+  </div>
+
+  <h2>
+    {{ data.listTitle }}
+  </h2>
 
   <ol>
-    <li>
-      Efficiency: Time is precious, and cheat sheets allow you to grasp
-      important concepts quickly. Instead of sifting through extensive textbooks
-      or online resources, you can access the information you need in a fraction
-      of the time.
-    </li>
-    <li>
-      Clarity: By distilling complex subjects into simple, organized formats,
-      cheat sheets offer clarity. They eliminate the extraneous details and
-      present only the most pertinent information, making it easier to
-      understand and retain.
-    </li>
-    <li>
-      Accessibility: Cheat sheets are portable and easily accessible. Whether
-      you're studying at home, in a coffee shop, or on the go, you can carry
-      your cheat sheet with you for quick reference whenever you need it.
-    </li>
-    <li>
-      Retention: The act of creating or using cheat sheets reinforces learning.
-      When you actively engage with the material to condense it into a cheat
-      sheet format, you reinforce your understanding and retention of the
-      information.
-    </li>
-    <li>
-      Versatility: Cheat sheets are versatile tools that can be tailored to your
-      specific needs. Whether you're learning a new programming language,
-      studying for a certification exam, or mastering a musical instrument,
-      there's likely a cheat sheet available to aid your learning process.
-    </li>
-  </ol>
-
-  <h2>How to Use Cheat Sheets Effectively</h2>
-
-  <ol>
-    <li>
-      Create Your Own: Take an active role in your learning by creating your own
-      cheat sheets. Summarize key concepts in your own words, organize
-      information logically, and include visual aids such as diagrams or charts
-      to enhance understanding.
-    </li>
-    <li>
-      Review Regularly: Incorporate cheat sheet review into your study routine.
-      Regularly revisiting the information reinforces retention and ensures that
-      it remains fresh in your mind.
-    </li>
-    <li>
-      Combine with Practice: Use cheat sheets in conjunction with practical
-      application. Apply the concepts you've learned in real-world scenarios to
-      solidify your understanding and proficiency.
-    </li>
-    <li>
-      Seek Quality Resources: Not all cheat sheets are created equal. Look for
-      reputable sources and verify the accuracy of the information before
-      relying on a cheat sheet for learning.
+    <li *ngFor="let item of data.list">
+      {{ item.item }}
     </li>
   </ol>
 
   <h2>Conclusion</h2>
 
   <p>
-    In conclusion, cheat sheets are valuable tools for accelerating your
-    learning journey. By providing efficient access to essential information,
-    enhancing clarity and retention, and offering versatility in their
-    application, cheat sheets empower learners to master new subjects with ease.
-    So, the next time you embark on a learning endeavor, consider harnessing the
-    power of cheat sheets to expedite your progress.
+    {{ data.conclusion }}
   </p>
 </div>

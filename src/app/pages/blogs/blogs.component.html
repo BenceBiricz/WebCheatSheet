@@ -1,26 +1,26 @@
 <div class="container">
+  <div class="d-flex justify-content-center pb-5">
+    <h1>Blogs</h1>
+  </div>
+
   <div class="row">
-    <div class="col-4">
-      <div class="card text-white bg-dark w-100 h-100 shadow rounded-4">
-        <img
-          class="card-img-top img-round"
-          src="assets/pictures/test.png"
-          alt="Card image cap"
-        />
-        <div class="card-body p-4">
+    <div *ngFor="let blog of blogs" class="col-6">
+      <div class="w-100 h-100 rounded-4">
+        <button class="blog-btn" (click)="openArticle(blog.data)">
+          <img
+            class="img-round"
+            [src]="'assets/pictures/' + blog.img"
+            alt="Card image cap"
+          />
+        </button>
+
+        <div class="card-body pt-4">
           <h5 class="card-title">
-            The Power of Cheat Sheets: A Shortcut to Learning
+            {{ blog.title }}
           </h5>
           <p class="card-text">
-            Are you looking for a quick and effective way to learn new things?
-            Look no further than cheat sheets.
+            {{ blog.text }}
           </p>
-          <a
-            routerLink="/articles"
-            routerLinkActive="active"
-            class="btn btn-light"
-            >Open article</a
-          >
         </div>
       </div>
     </div>

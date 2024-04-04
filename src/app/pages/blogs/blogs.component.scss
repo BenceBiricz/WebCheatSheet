@@ -1,3 +1,15 @@
 .img-round {
-  border-radius: 10px 10px 0 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.blog-btn {
+  padding: 0;
+  border: none;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.blog-btn:hover {
+  transform: scale(102%);
 }
